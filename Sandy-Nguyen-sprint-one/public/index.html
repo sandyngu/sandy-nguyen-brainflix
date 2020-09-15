@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="index.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app"/>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -27,38 +24,39 @@
     <title>BrainFlix</title>
   </head>
   <body>
-    <section className="header">
+    <!-- <section className="header">
       <div className="header__parent">
           <div className="header__logo-container">
-              <a href="index.html"><img src="/assets/logo/Logo-brainflix.svg" className="header__logo" alt="BrainFlix Logo"></img></a>
+              <a href="index.html"><img src="/src/assets/logo/Logo-brainflix.svg" className="header__logo" alt="BrainFlix Logo"></img></a>
           </div>
           <div className="header__search-upload-photo-container">
               <form className="search-bar">
-                  <input type="text" className="search-bar__input" placeholder="Search"><a href="SEARCHURL"><img src="/assets/icons/SVG/Icon-search.svg"/></a></input>
+                  <input type="text" className="search-bar__input" placeholder="Search"><img src="/src/assets/icons/SVG/Icon-search.svg"/>Search</input>
               </form>
-              <button type="button" className="button header__upload-button"><img src="/assets/icons/Icon-upload.svg"/>UPLOAD</button>
+              <button type="button" className="button header__upload-button"><img src="/src/assets/icons/SVG/Icon-upload.svg"/>UPLOAD</button>
               <div className="circle-photo"></div>
           </div>
-  </section>
-  <section className="main__video">
+      </div>
+    </section>
+    <section className="main__video">
       <div className="main__video-container">
-          <video controls poster="/assets/images/video-list-0.jpg">
-              <source src="/src/assets/video/BrainStation Sample Video.mp4" type="video/mp4">
-          </video>
+          <video controls poster="..src/assets/images/video-list-0.jpj source src="/src/assets/video/BrainStation Sample Video.mp4" type="video/mp4"/>
+      </div>
+      <div className="main__video-details-container"
           <h2 className="main__video-name">BMX Rampage: 2018 Highlights</h2>
           <div className="main__author-date-container">
               <h3 className="main__video-author">By Red Cow</h3>
               <p class="date">12/18/2018</p>
           </div>
-          <div className="main__views-likes-container">
-              <div><img src="/src/assets/icons/Icon-views.svg" alt="Views Logo">1,001,023</div>
-              <div><img src="/src/assets/icons/Icon-views.svg" alt="Likes Logo">110,985</div>    
-          </div>
-          <div className="divider"></div>
-          <p>On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title</p>
       </div>
-  </section>
-  <section className="main__comments">
+      <div className="main__views-likes-container">
+          <div><img src="/src/assets/icons/Icon-views.svg" alt="Views Logo">1,001,023</div>
+          <div><img src="/src/assets/icons/Icon-views.svg" alt="Likes Logo">110,985</div>    
+      </div>
+      <div className="divider"></div>
+      <p>On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title</p>
+    </section>
+    <section className="main__comments">
       <div className="main__comments-container">
           <h2 className="main__comments-heading">3 Comments</h2>
           <div className="main__author-date-container">
@@ -70,19 +68,19 @@
               </form> 
           </div>
       </div>
-  </section>
-  <section className="sub-section">
-    <p className="sub-section__heading">NEXT VIDEO</p>
-    <div className="sub-section__video-container">
-      <div className="sub-section__next-video">
-        <img src="/src/assets/images/video-list-1.jpg" className="sub-section__next-video-thumbnail">
-        <div className="sub-section__next-video-content">
-          <p className="sub-section__video-title"></p>
-          <p className="sub-section__video-author"></p>
+    </section>
+    <section className="sub-section">
+      <p className="sub-section__heading">NEXT VIDEO</p>
+      <div className="sub-section__video-container">
+        <div className="sub-section__next-video">
+          <img src="/src/assets/images/video-list-1.jpg" className="sub-section__next-video-thumbnail">
+          <div className="sub-section__next-video-content">
+            <p className="sub-section__video-title"></p>
+            <p className="sub-section__video-author"></p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section> -->
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

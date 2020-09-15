@@ -1,0 +1,77 @@
+@import 'variables';
+
+@mixin mobile {
+    @media screen and (min-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Avenir';
+    margin: 0;
+}
+h1 {
+    @include mobile {
+        font-size: $h1-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $hero-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $hero-desktab-fontsize;
+    }
+}
+h2 {
+    @include mobile {
+        font-size: $h2-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h2-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h2-desktab-fontsize;
+    }
+}
+h3 {
+    @include mobile {
+        font-size: $h3-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h3-desktab-fontsize;
+    }
+}
+h4 {
+    @include mobile {
+        font-size: $h4-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h4-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
+}
+p {
+    @include mobile {
+        font-size: $p-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h4-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
+}    
