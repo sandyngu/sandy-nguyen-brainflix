@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentsForm from '../CommentsForm/CommentsForm'
 
 const commentsList = [
     {
@@ -37,7 +38,7 @@ function CommentsSection(props) {
 
     return (
         <section className="sub-section">
-            <p className="sub-section__heading">NEXT VIDEO</p>
+            <CommentsForm />
             {commentsList.map(commentsInfo => 
                 <CommentsBox name={commentsInfo.name} date={commentsInfo.date} text={commentsInfo.text}/>)}
         </section>
