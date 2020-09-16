@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from '../../assets/logo/Logo-brainflix.svg';
+import './header.scss'
 
 const Header = () => {
     return (
@@ -9,10 +10,10 @@ const Header = () => {
             </div>
             <div className="header__search-upload-photo-container">
                 <form className="search-bar">
-                    <input type="text" className="search-bar__input" placeholder="Search"/><img src="../../assets/icons/SVG/Icon-search.svg" alt="Magnifying Glass Icon"/>
+                    <input type="text" className="header__search-bar-input" placeholder="Search"/>
                 </form>
-                <button type="button" className="button header__upload-button"><img src="../../assets/icons/SVG/Icon-upload.svg" alt="Upload Icon"/>UPLOAD</button>
-                <div className="circle-photo"></div>
+                <button type="button" className="button header__upload-button"><img src="../../assets/icons/SVG/Icon-upload.svg" alt="Upload Icon" className="header__upload-button-icon"/>UPLOAD</button>
+                <div className="header__circle-photo"></div>
             </div>
       </header>
     )

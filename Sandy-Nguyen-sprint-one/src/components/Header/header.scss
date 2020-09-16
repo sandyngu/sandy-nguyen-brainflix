@@ -1,2 +1,56 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
 
+::placeholder {
+}
 
+.header {
+    &__logo {
+        margin: 0;
+    }
+    &__search-upload-photo-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__search-bar {
+
+        &-input {
+            background-image: url('../../assets/icons/SVG/Icon-search.svg');
+            background-repeat: no-repeat;
+            background-color: $secondary-background-color;
+            background-position: 13px 15px;
+            padding: 6% 15%;
+            border: $circle-divider-color 2px solid;
+            border-radius: 4px;
+            margin-bottom: 5%;
+        }
+    }
+    &__upload-button {
+        background-color: $button-color;
+        border: none;
+        border-radius: 5px;
+        width: 70%;
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__circle-photo {
+        background-image: url('../../assets/images/Mohan-muruge.jpg');
+        background-size: cover;
+        background-position: 15% 50%;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+}
+img {
+    height: 100px;
+    width: 150px;
+}
+
+video {
+    width: 100%;
+}

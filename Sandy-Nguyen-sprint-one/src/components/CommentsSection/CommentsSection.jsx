@@ -1,21 +1,47 @@
 import React from 'react';
 
-const CommentsSection = () => {
+const commentsList = [
+    {
+        name: 'Michael Lyons',
+        date: '12/18/2018',
+        text: 'They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.'
+    },
+    {
+        name: 'Gary Wong',
+        date: '12/18/2018',
+        text: 'Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!'
+    },
+    {
+        name: 'Theodore Duncan',
+        date: '11/15/2018',
+        text: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
+    }
+];
+
+const CommentsBox = (props) => {
     return ( 
-        <section className="main__comments">    
-            <div className="main__comments-container">
-                <h3 className="main__comments-heading">3 Comments</h3>
-                <div className="main__author-date-container">
-                    <div className="comments-section__photo"></div>
-                    <form className="comments-section__form">
-                        <label id="name" htmlFor="comment" className="comments-section__form-title">JOIN THE CONVERSATION</label>
-                        <br/><textarea type="text" className="comments-section__form-input" name="comment" placeholder="Write comment here"></textarea>
-                        <button className="button comments-section__button" type="submit">COMMENT</button>
-                    </form> 
-                </div>
+        <div className="comments-section__guestbook">
+            <div className="divider comment-section__guestbook-divider"></div>
+            <div className="comments-section__guestbook-container">
+                <div className="comments-section__guestbook-photo"></div>
+                <div className="comments-section__guestbook-entry"></div>
+                    <h4 className="comments-section__guestbook-name">{props.name}</h4>
+                    <div className="comments-section__guestbook-date">{props.date}</div>
+                    <div className="comments-section__guestbook-text">{props.text}</div>
             </div>
-        </section>  
+        </div>
     )
 }
+
+function CommentsSection(props) {
+
+    return (
+        <section className="sub-section">
+            <p className="sub-section__heading">NEXT VIDEO</p>
+            {commentsList.map(commentsInfo => 
+                <CommentsBox name={commentsInfo.name} date={commentsInfo.date} text={commentsInfo.text}/>)}
+        </section>
+    );
+};
 
 export default CommentsSection;

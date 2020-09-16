@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import Video from './components/Video/Video';
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import NextVideoQueue from './components/NextVideoQueue/NextVideoQueue';
-import CommentsSection from './components/CommentsSection/CommentsSection';
+import CommentsForm from './components/CommentsSection/CommentsSection';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Video />
           <VideoDetails />
         </section>
-        <CommentsSection />
+        <CommentsForm />
         <NextVideoQueue />
 
     </div>
