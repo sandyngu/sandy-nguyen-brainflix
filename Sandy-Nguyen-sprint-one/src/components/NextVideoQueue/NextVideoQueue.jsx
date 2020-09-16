@@ -1,54 +1,62 @@
 import React from 'react';
 import NextVideo from '../NextVideo/NextVideo';
+import thumbnail1 from '../../assets/images/video-list-1.jpg';
+import thumbnail2 from '../../assets/images/video-list-2.jpg';
+import thumbnail3 from '../../assets/images/video-list-3.jpg';
+import thumbnail4 from '../../assets/images/video-list-4.jpg';
+import thumbnail5 from '../../assets/images/video-list-5.jpg';
+import thumbnail6 from '../../assets/images/video-list-6.jpg';
+import thumbnail7 from '../../assets/images/video-list-7.jpg';
+import thumbnail8 from '../../assets/images/video-list-8.jpg';
 
 function NextVideoQueue(props) {
 
     const nextVideoList = [
     {
         id: 1,
-        thumbnail: '../../assets/images/video-list-1.jpg',
+        thumbnail: thumbnail1,
         title: 'Become A Travel Pro In One Easy Lesson',
         author: 'Todd Welch'
     },
     {
         id: 2,
-        thumbnail: '../../assets/images/video-list-2.jpg',
+        thumbnail: thumbnail2,
         title: 'Les Houches The Hidden Gem Of The Chamonix',
         author: 'Cornelia Blair'
     },
     {
         id: 3,
-        thumbnail: '../../assets/images/video-list-3.jpg',
+        thumbnail: thumbnail3,
         title: 'Travel Health Useful Medical Information For',
         author: 'Glen Harper'
     },
     {
         id: 4,
-        thumbnail: '../../assets/images/video-list-4.jpg',
+        thumbnail: thumbnail4,
         title: 'Cheap Airline Tickets Great Ways To Save',
         author: 'Emily Harper'
     },
     {
         id: 5,
-        thumbnail: '../../assets/images/video-list-5.jpg',
+        thumbnail: thumbnail5,
         title: 'Take A Romantic Break In A Boutique Hotel',
         author: 'Ethan Owen'
     },
     {
         id: 6,
-        thumbnail: '../../assets/images/video-list-6.jpg',
+        thumbnail: thumbnail6,
         title: 'Choose The Perfect Accommodations',
         author: 'Lydia Perez'
     },
     {
         id: 7,
-        thumbnail: '../../assets/images/video-list-7.jpg',
+        thumbnail: thumbnail7,
         title: 'Cruising Destination Ideas',
         author: 'Timothy Austin'
     },
     {
         id: 8,
-        thumbnail: '../../assets/images/video-list-8.jpg',
+        thumbnail: thumbnail8,
         title: 'Train Travel On Track For Safety',
         author: 'Scotty Cranmer'
     }
