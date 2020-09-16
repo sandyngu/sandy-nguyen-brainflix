@@ -1,17 +1,22 @@
 import React from 'react';
-// import Logo from '../assets/logo/Logo-brainflix.svg';
 import './App.css';
 import Header from './components/Header/Header';
 import Video from './components/Video/Video';
-import VideoDetails from './components/VideoDetails/VideoDetails'
+import VideoDetails from './components/VideoDetails/VideoDetails';
+import NextVideoQueue from './components/NextVideoQueue/NextVideoQueue';
+import CommentsSection from './components/CommentsSection/CommentsSection';
 
 function App() {
   return (
     <div className="App">      
-        {/* <img src={Logo} className="App-logo" alt="logo" /> */}
         <Header />
-        <Video />
-        <VideoDetails />
+        <section className="main__video">
+          <Video />
+          <VideoDetails />
+        </section>
+        <CommentsSection />
+        <NextVideoQueue />
+
     </div>
   );
 }

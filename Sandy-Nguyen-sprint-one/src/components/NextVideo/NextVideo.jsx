@@ -1,11 +1,15 @@
 import React from 'react';
 
-const NextVideo = () => {
+function NextVideo(props) {
     return (
-        <div className="main__video-container">
-            <video controls poster="..src/assets/images/video-list-0.jpg" source src="/src/assets/video/BrainStation Sample Video.mp4" type="video/mp4"/>
+        <div className="sub-section__next-video">
+            <img src={props.thumbnail} className="sub-section__next-video-thumbnail" alt="Video Thumbnail"/>
+            <div className="sub-section__next-video-content">
+                <p className="sub-section__video-title">{props.title}</p>
+                <p className="sub-section__video-author">{props.author}</p>
+            </div>
         </div>
-    )
+    );
 }
 
 export default NextVideo;
