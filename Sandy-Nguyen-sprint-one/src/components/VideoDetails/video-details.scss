@@ -1,0 +1,58 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+.divider {
+    border-bottom: 2px solid $circle-divider-color;
+}
+
+.main__video {
+
+    &-details {
+
+        &-name {
+            margin: 5%;
+            line-height: 35px;
+        }
+        &-author-date {
+            display: flex;
+        }
+        &-author {
+            margin: 0 5%;
+            font-weight: 500;
+        }
+        &-date {
+            color: $small-title-color;
+            font-weight: normal;
+            margin: 0;
+        }
+        &-views-likes {
+            display: flex;
+            align-items: center;
+            margin: 7% 5%;
+        }
+        &-views {
+            font-size: $h3-mobile-fontsize;
+            padding-right: 8%;
+        }
+        &-likes {
+            font-size: $h3-mobile-fontsize;
+
+
+        }
+    }
+    
+    &-icon {
+        width: 22px;
+        height: 20px;
+        vertical-align: bottom;
+
+        &-likes {
+            width: 17px;
+            vertical-align: bottom;
+        }
+        &-views {
+            vertical-align: bottom;
+        }
+    }
+    
+}
