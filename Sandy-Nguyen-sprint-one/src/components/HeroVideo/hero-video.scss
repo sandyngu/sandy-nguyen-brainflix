@@ -22,6 +22,7 @@
         &-controls {
             display: flex;
             position: absolute;
+            justify-content: space-between;
             margin: -16% 5%;
             
             &-scrubber {

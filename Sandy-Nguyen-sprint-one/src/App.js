@@ -8,17 +8,18 @@ import CommentsSection from './components/CommentsSection/CommentsSection';
 
 function App() {
   return (
-    <div className="App">      
-        <Header />
-        <section className="main">
-          <HeroVideo />
+    <div className="App">   
+        <section className="header">
+          <Header />
+        </section>   
+        <HeroVideo />
+        <section className="main-section">
           <VideoDetails />
-        </section>
-        <section className="main__comments">
           <CommentsSection />
         </section>
-        <NextVideoQueue />
-
+        <section className="sub-section">
+          <NextVideoQueue />
+        </section>
     </div>
   );
 }

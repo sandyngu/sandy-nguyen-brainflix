@@ -9,8 +9,8 @@ const Header = () => {
             <div className="header__logo-container">
                 <a href="index.html"><img src={logo} className="header__logo" alt="BrainFlix Logo"/></a>
             </div>
-            <div className="search-bar-container">
-                <form className="search-bar">
+            <div className="header__search-bar-container">
+                <form className="header__search-bar">
                     <input type="text" className="header__search-bar-input" placeholder="Search"/>
                 </form>
             </div>

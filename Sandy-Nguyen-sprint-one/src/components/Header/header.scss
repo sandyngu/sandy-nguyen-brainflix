@@ -21,10 +21,18 @@ button {
 
     &__parent {
         padding-bottom: 5%;
+
+        @include tablet {
+            display: flex;
+        }
     }
     &__logo-container {
         display: flex;
         justify-content: center;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
     }
     &__logo {
         margin: 8% 0 4% 0;
@@ -32,27 +40,36 @@ button {
     }
     &__upload-photo-container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
+        margin: 0 5%;
+
+        @include tablet {
+            justify-content: flex-end;
+        }
     }
     &__search-bar {
-        &-container {
-            display: flex;
-        }
+        display: flex;
+        justify-content: center;
         
         &-input {
             font-family: 'Avenir';
             background-image: url('../../assets/icons/SVG/Icon-search.svg');
             background-repeat: no-repeat;
             background-color: $secondary-background-color;
-            background-position: 5%;
-            padding: 5% 12%;
+            background-position: 15px;
+            padding: 15px 40px; /*5% 12%*/
             border: $circle-divider-color 2px solid;
             border-radius: 4px;
-            width: 212px; /*65%*/ 
-            height: 13px;
+            width: 100%;
+            max-width: 408px;
+            height: 50px;
+            max-height: 17px;
             margin: 0 5% 3% 5%;
+
+            @include tablet {
+                justify-content: flex-end;
+                width: 150px;
+            }
         }
     }
     &__upload-button {
@@ -60,8 +77,9 @@ button {
         justify-content: center;
         align-items: center;
         letter-spacing: 0.5px;
-        height: 10vh;
-        width: 70%;
+        height: 50px;
+        width: 80%;
+        max-width: 410px;
         
         &-icon {
             width: 18px;
