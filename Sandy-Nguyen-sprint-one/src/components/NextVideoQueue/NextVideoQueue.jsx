@@ -8,6 +8,7 @@ import thumbnail5 from '../../assets/images/video-list-5.jpg';
 import thumbnail6 from '../../assets/images/video-list-6.jpg';
 import thumbnail7 from '../../assets/images/video-list-7.jpg';
 import thumbnail8 from '../../assets/images/video-list-8.jpg';
+import './next-video-queue.scss';
 
 function NextVideoQueue(props) {
 

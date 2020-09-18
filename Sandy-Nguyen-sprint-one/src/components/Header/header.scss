@@ -34,6 +34,7 @@ button {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%;
     }
     &__search-bar {
         &-container {
@@ -49,7 +50,8 @@ button {
             padding: 5% 12%;
             border: $circle-divider-color 2px solid;
             border-radius: 4px;
-            width: 65%;
+            width: 212px; /*65%*/ 
+            height: 13px;
             margin: 0 5% 3% 5%;
         }
     }
@@ -58,7 +60,7 @@ button {
         justify-content: center;
         align-items: center;
         letter-spacing: 0.5px;
-        height: 50px;
+        height: 10vh;
         width: 70%;
         
         &-icon {

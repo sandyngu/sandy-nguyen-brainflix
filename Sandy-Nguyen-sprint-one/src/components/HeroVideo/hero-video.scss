@@ -14,21 +14,21 @@
             justify-content: space-between;
         }
         &-icon {
-            width: 18px;
+            width: 20px;
             height: 20px;
-            padding: 8px 15px;
-            margin-right: 10px;
+            padding: 8px 16px;
+            margin-right: 3%;
         }
         &-controls {
             display: flex;
             position: absolute;
-            margin: -16% 4.5%;
+            margin: -16% 5%;
             
             &-scrubber {
-                width: 113px;
+                width: 40%;
             }
             &-fullscreen {
-                padding-right: 5px;
+                padding-right: 15%;
             }
             &-volume {
                 margin-right: 0;
