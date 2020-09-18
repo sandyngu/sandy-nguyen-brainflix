@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentsForm from '../CommentsForm/CommentsForm'
+import './comments-section.scss';
 
 const commentsList = [
     {
@@ -22,14 +23,15 @@ const commentsList = [
 const CommentsBox = (props) => {
     return ( 
         <div className="comments-section__guestbook">
-            <div className="divider comment-section__guestbook-divider"></div>
             <div className="comments-section__guestbook-container">
                 <div className="comments-section__guestbook-photo"></div>
-                <div className="comments-section__guestbook-entry"></div>
+                <div className="comments-section__guestbook-entry">
                     <h4 className="comments-section__guestbook-name">{props.name}</h4>
                     <div className="comments-section__guestbook-date">{props.date}</div>
                     <div className="comments-section__guestbook-text">{props.text}</div>
+                </div>
             </div>
+            <div className="divider comments-section__guestbook-divider"></div>
         </div>
     )
 }

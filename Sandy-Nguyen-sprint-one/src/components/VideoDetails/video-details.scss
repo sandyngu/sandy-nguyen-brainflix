@@ -10,7 +10,7 @@
     &-details {
 
         &-name {
-            margin: 5%;
+            margin: 6% 5% 4% 4%;
             line-height: 35px;
         }
         &-author-date {
@@ -36,8 +36,15 @@
         }
         &-likes {
             font-size: $h3-mobile-fontsize;
-
-
+        }
+        &-divider {
+            width: 92.5%;
+            margin: 0 auto;
+        }
+        &-description {
+            margin: 7% 5%;
+            letter-spacing: 0.15px;
+            line-height: 19px;
         }
     }
     

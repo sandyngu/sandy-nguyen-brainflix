@@ -5,30 +5,35 @@
     
     &-video {
         width: 100%;
+        position: relative;
 
-        &-controls {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-            &-scrubber {
-                height: 300px;
-            }
-        }
         &-button {
-            background-color: rgba(0,0,0,0.75);
+            background-color: rgba(0,0,0,0.4);
             border-radius: 4px;
-            height: 43px;
-            width: 28%;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
         }
         &-icon {
-            width: 20px;
-            height: 30px;
-            padding: 2% 6%;
-            
+            width: 18px;
+            height: 20px;
+            padding: 8px 15px;
+            margin-right: 10px;
         }
-    }
+        &-controls {
+            display: flex;
+            position: absolute;
+            margin: -16% 4.5%;
+            
+            &-scrubber {
+                width: 113px;
+            }
+            &-fullscreen {
+                padding-right: 5px;
+            }
+            &-volume {
+                margin-right: 0;
+                padding-left: 0;
+            }
+        }
+    }   
 }

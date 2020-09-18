@@ -1,0 +1,29 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+.sub-section__next-video {
+    display: flex;
+    margin: 5%;
+
+    &-thumbnail {
+        width: 41%;
+        height: 70px;
+        border-radius: 5px;
+    }
+    &-content {
+        margin: 2% 5%;
+    }
+    &-title {
+        margin: 0;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 150px
+    }
+    &-author {
+        font-weight: normal;
+        margin: 5% 0;
+    }
+
+}

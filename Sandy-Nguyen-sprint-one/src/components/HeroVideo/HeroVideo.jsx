@@ -3,7 +3,7 @@ import poster from '../../assets/images/video-list-0.jpg';
 import play from '../../assets/icons/SVG/Icon-play.svg';
 import fullscreen from '../../assets/icons/SVG/Icon-fullscreen.svg';
 import volume from '../../assets/icons/SVG/Icon-volume.svg';
-// import line from '../../assets/icons/SVG/Icon-line.svg';
+import line from '../../assets/icons/PNG/Icon-line.png';
 import './hero-video.scss'
 
 const HeroVideo = () => {

@@ -14,7 +14,9 @@ function App() {
           <HeroVideo />
           <VideoDetails />
         </section>
-        <CommentsSection />
+        <section className="main__comments">
+          <CommentsSection />
+        </section>
         <NextVideoQueue />
 
     </div>
