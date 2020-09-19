@@ -10,16 +10,18 @@ function App() {
   return (
     <div className="App">   
         <section className="header">
-          <Header />
+            <Header />
         </section>   
         <HeroVideo />
-        <section className="main-section">
-          <VideoDetails />
-          <CommentsSection />
-        </section>
-        <section className="sub-section">
-          <NextVideoQueue />
-        </section>
+        <div className="section-container">
+            <section className="main-section">
+              <VideoDetails />
+              <CommentsSection />
+            </section>
+            <section className="sub-section">
+              <NextVideoQueue />
+            </section>
+        </div>
     </div>
   );
 }

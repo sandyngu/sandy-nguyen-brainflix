@@ -3,56 +3,38 @@
 
 .comments-section__guestbook {
     margin: 0 auto;
+    font-size: $h3-mobile-fontsize;
     
-    @include mobile {
-        font-size: $h3-mobile-fontsize;
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
     }
-    // @include tablet {
-    //     width: 71%;
-    //     margin-left: 15%;
-    // }
-    // @include desktop {
-    //     width: 47.7%;
-    //     margin-left: 26.5%;
-    // }
     
     &-entry {
         display: flex;
         flex-wrap: wrap;
-        margin: 2% 4.5% 2% 0;
+        margin: 2% 0;
         justify-content: space-between;
-        width: 73%;
 
-        // @include tablet {
-        //     margin: 2% 4% 0 0;
-        //     justify-content: flex-start;
-        // }
-        // @include desktop {
-        //     margin: 2% 5% 0 0;
-        //     justify-content: flex-start;
-        // }
+        @include tablet {
+            justify-content: flex-start;
+            margin: 1.5% 0 0 0;
+            width: 90%;
+        }
+
     }
     &-photo {
         background-color: $circle-divider-color;
         height: 40px;
         border-radius: 50%;
         min-width: 40px;
-        margin: 5%;
-        
-        // @include tablet {
-        //     margin: 1.5% 2% 0 4%;
-        // }
-        // @include desktop {
-        //     margin: 1.5% 2% 0 5%;   
-        // }
-    }
-    &-divider {
-        width: 90%;
-        margin: 0 auto;
+        margin: 5% 5% 5% 0;
 
         @include tablet {
-            width: 94%;
+            height: 45px;
+            min-width: 45px;
+            margin: 1% 2% 0 0;
         }
+        
     }
     &-container {
         margin: 2% auto;
@@ -64,30 +46,21 @@
         margin: 6% 0 0 0;
         font-size: $h3-mobile-fontsize;
 
-        // @include tablet {
-        //     font-size: $namelabel-desktab-fontsize;
-        //     margin: 0 2% 0 0;
-        // }
-        // @include desktop {
-        //     font-size: $namelabel-desktab-fontsize;
-        //     margin: 0.5% 2% 0 0;
-        // }
+        @include tablet {
+            font-size: $h2-desktab-fontsize;
+            margin: 0 2% 0 0;
+        }
+
     }
     &-date {
         display: inline-flex;
         margin: 6% 0 0 0;
         color: $small-title-color;
 
-        // @include tablet {
-        //     margin: 0;
-        //     font-size: $h4-desktab-fontsize;
-        //     padding-top: 0.5%;
-        // }
-        // @include desktop {
-        //     margin: 0.5% 2% 0 0;
-        //     font-size: $h4-desktab-fontsize;
-        //     padding-top: 0.5%;
-        // }
+        @include tablet {
+            font-size: $h3-desktab-fontsize;
+            margin: 0.1% 0 0 0;
+        }
     }
     &-text {
         margin: 4% 0;
@@ -95,14 +68,8 @@
         width: 99.5%;
         line-height: 20px;
 
-        // @include tablet {
-        //     font-size: $h4-desktab-fontsize;
-        //     margin: 2% 0;
-        // }
-        // @include desktop {
-        //     font-size: $h4-desktab-fontsize;
-        //     margin: 2% 0;
-        //     width: 100%;
-        // }
+        @include tablet {
+            margin: 1% 0;
+        }
     }
 }

@@ -5,6 +5,10 @@
     &__heading {
         font-weight: 500;
         color: $small-title-color;
-        margin: 11% 5%;
+        margin: 11% 0;
+
+        @include tablet {
+            margin: 5.5% 0;
+        }
     }
 }

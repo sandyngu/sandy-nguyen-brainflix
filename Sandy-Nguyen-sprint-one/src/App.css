@@ -1,3 +1,5 @@
+@import '/src/variables';
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -30,5 +32,12 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.section-container {
+
+  @include desktop {
+
   }
 }

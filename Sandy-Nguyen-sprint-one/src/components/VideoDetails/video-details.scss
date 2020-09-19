@@ -10,12 +10,16 @@
     &-details {
 
         &-title {
-            margin: 6% 5% 4% 5%;
+            margin: 6% 0 4% 0;
             line-height: 35px;
 
             @include tablet {
+                font-size: $hero-desktab-fontsize;
                 line-height: 50px;
-                margin: 4% 3% 2% 3%;
+                margin: 5% 0 1.5% 0;
+            }
+            @include desktop {
+                font-size: $h1-desktab-fontsize;
             }
         }
         &-container {
@@ -24,7 +28,8 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                margin: 0 5% 3% 1%;
+                margin-bottom: 3%;
+                width: 98%;
             }
         }
         &-author-date {
@@ -36,26 +41,26 @@
             }
         }
         &-author {
-            margin: 0 5%;
+            margin: 0 3% 0 0;
             font-weight: 500;
         }
         &-date {
             color: $small-title-color;
             font-weight: normal;
             margin: 0;
-
-            @include tablet {
-                margin-bottom: 0.5%;
-            }
         }
         &-views-likes {
             display: flex;
             align-items: center;
-            margin: 7% 5%;
+            margin: 7% 0;
 
             @include tablet {
                 margin: 0;
                 width: 30%;
+            }
+
+            @include desktop {
+                width: 37%;
             }
         }
         &-views {
@@ -66,22 +71,17 @@
             font-size: $h3-mobile-fontsize;
         }
         &-divider {
-            width: 92.5%;
             margin: 0 auto;
-
-            @include tablet {
-                width: 94%;
-            }
         }
         &-description {
-            margin: 7% 5%;
+            margin: 7% 0;
             letter-spacing: 0.1px;
             line-height: 19px;
 
             @include tablet {
-                margin: 4.5% 3%;
+                margin: 4.5% 0;
                 line-height: 25px;
-                width: 71%;
+                width: 76%;
                 font-size: $h3-desktab-fontsize;
             }
         }

@@ -21,12 +21,16 @@ button {
 
     &__parent {
         padding-bottom: 5%;
+        margin: 0 5%;
 
         @include tablet {
             display: flex;
             justify-content: space-between;
             padding-bottom: 0;
             margin: 0 1%;
+        }
+        @include desktop {
+            margin: 0 10%;
         }
     }
     &__logo-container {
@@ -49,7 +53,6 @@ button {
     &__container {
         display: flex;
         justify-content: center;
-        margin: 0 5%;
         flex-wrap: wrap;
 
         @include tablet {
@@ -58,6 +61,9 @@ button {
             justify-content: space-between;
             margin: 0 2%;
             align-items: center;
+        }
+        @include desktop {
+            width: 45%;
         }
     }
     &__upload-photo-container {
@@ -70,6 +76,9 @@ button {
             justify-content: space-between;
             width: 38%;
         }
+        @include desktop {
+            width: 40%;
+        }
     }
     &__search-bar {
         display: flex;
@@ -78,6 +87,9 @@ button {
 
         @include tablet {
             width: 60%;
+        }
+        @include desktop {
+            width: 57%;
         }
         
         &-input {
@@ -114,6 +126,9 @@ button {
         @include tablet {
             width: 60%;
         }
+        @include desktop {
+            width: 60%;
+        }
         
         &-icon {
             width: 18px;
@@ -124,7 +139,7 @@ button {
     &__circle-photo {
         background-image: url('../../assets/images/Mohan-muruge.jpg');
         background-size: cover;
-        background-position: 10%;
+        background-position: 15%;
         height: 50px;
         width: 50px;
         border-radius: 50%;

@@ -1,32 +1,61 @@
 @import '../../partials/fonts';
 @import '../../partials/mixins';
 
-.sub-section__next-video {
-    display: flex;
-    margin: 5%;
+.sub-section {
 
-    &-thumbnail {
-        width: 41%;
-        max-width: 125px;
-        height: 21.5vw;
-        border-radius: 5px;
-        object-fit: cover;
-    }
-    &-content {
-        margin: 2% 5%;
-    }
-    &-title {
-        margin: 0;
-        font-weight: 500;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 150px;
+    &__next-video {
+        display: flex;
+        margin: 7% 0 6% 0;
 
-    }
-    &-author {
-        font-weight: normal;
-        margin: 5% 0;
-    }
+        @include tablet {
+            margin: 2.5% 0;
+        }
 
+        &-thumbnail {
+            width: 41%;
+            max-width: 125px;
+            height: 23vw;
+            border-radius: 5px;
+            object-fit: cover;
+
+            @include tablet {
+                height: 10vw;
+            }
+            @include desktop {
+                height: 6.5vw;
+            }
+        }
+        &-content {
+            margin: 2% 5%;
+
+            @include tablet {
+                margin: 0 3%;
+            }
+        }
+        &-title {
+            margin: 0;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 150px;
+
+            @include tablet {
+                font-size: $h2-desktab-fontsize;
+                overflow: visible;
+                white-space: normal;
+                width: 200px;
+                line-height: 25px;
+            }
+
+        }
+        &-author {
+            font-weight: normal;
+            margin: 5% 0;
+
+            @include tablet {
+                margin: 4% 0;
+            }
+        }
+    }
 }

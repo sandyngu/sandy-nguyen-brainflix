@@ -17,24 +17,24 @@ input {
 
     &__heading {
         font-weight: 500;
-        margin: 10% 0 8% 5%;
+        margin: 11% 0 8% 0;
 
         @include tablet {
-            margin: 8% 3% 3% 3%;
+            margin: 8% 0 3% 0;
         }
     }
 
     &__photo {
         background-image: url('../../assets/images/Mohan-muruge.jpg');
         background-size: cover;
-        background-position: 10%;
+        background-position: 15%;
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        margin: 6% 4.5%;
+        margin: 7% 4.5% 6% 0;
 
         @include tablet {
-            margin: 2.5% 2% 0 3%;
+            margin: 3.2% 2% 0 0;
         }
     }
 
@@ -42,19 +42,17 @@ input {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        margin-right: 5.5%;
 
         @include tablet {
             flex-wrap: nowrap;
             justify-content: flex-start;
-            margin-right: 3%;
         }
     }
     &__form {
-        width: 74%;
+        width: 78%;
 
         @include tablet {
-            width: 84%;
+            width: 86%;
             height: 95px;
         }
 
@@ -67,19 +65,21 @@ input {
             border: 2.5px solid $circle-divider-color;
             outline: none;
             border-radius: 5px;
-            margin-bottom: 5%;
+            margin: 1% 0 5% 0;
             resize: none;
             font-family: 'Avenir';
             width: 86%;
-            height: 13vh;
+            height: 10vh;
             padding: 6%;
+            min-height: 70px;
 
             @include tablet {
                 width: 63%;
                 height: 2.5vh;
                 padding: 2.2% 3% 3% 3%;
-            }
-            
+                min-height: 13px;
+                margin: 0.5% 0 5% 0;
+            }  
         }
         
         &-title {
@@ -102,7 +102,7 @@ input {
         @include tablet {
             font-size: $h3-desktab-fontsize;
             width: 27%;
-            margin: 0;
+            margin: 0.5% 0;
             height: 50px;
         }
     }
