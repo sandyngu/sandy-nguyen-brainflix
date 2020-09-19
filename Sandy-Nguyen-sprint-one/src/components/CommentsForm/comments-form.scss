@@ -6,25 +6,22 @@ input {
     font-size: $h3-mobile-fontsize;
 
     @include tablet {
-        font-size: $h4-desktab-fontsize;
+        font-size: $h3-desktab-fontsize;
     }
     @include desktop {
-        font-size: $h4-desktab-fontsize;
+        font-size: $h3-desktab-fontsize;
     }
 }
 .comments-section {
     padding-bottom: 11%;
 
-    @include tablet {
-        padding-bottom: 5%;
-    }
-    @include desktop {
-        padding-bottom: 3%;
-    }
-
     &__heading {
         font-weight: 500;
         margin: 10% 0 8% 5%;
+
+        @include tablet {
+            margin: 8% 3% 3% 3%;
+        }
     }
 
     &__photo {
@@ -37,10 +34,7 @@ input {
         margin: 6% 4.5%;
 
         @include tablet {
-            margin: 2.5%;
-        }
-        @include desktop {
-            margin: 1.9%;
+            margin: 2.5% 2% 0 3%;
         }
     }
 
@@ -49,16 +43,20 @@ input {
         flex-wrap: wrap;
         justify-content: flex-end;
         margin-right: 5.5%;
-    
+
         @include tablet {
-            margin-right: 10%;
-        }
-        @include desktop {
-            margin-left: 13%;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            margin-right: 3%;
         }
     }
     &__form {
         width: 74%;
+
+        @include tablet {
+            width: 84%;
+            height: 95px;
+        }
 
         &-title {
             letter-spacing: 0.3px;
@@ -70,34 +68,18 @@ input {
             outline: none;
             border-radius: 5px;
             margin-bottom: 5%;
-            
+            resize: none;
+            font-family: 'Avenir';
+            width: 86%;
+            height: 13vh;
+            padding: 6%;
+
             @include tablet {
-                margin-bottom: 4%;
+                width: 63%;
+                height: 2.5vh;
+                padding: 2.2% 3% 3% 3%;
             }
-            @include desktop {
-                margin: 0 10% 3% 0;
-
-            }
-
-            &-comment {
-                resize: none;
-                font-family: 'Avenir';
-                width: 86%;
-                height: 13vh;
-                padding: 6%;
-
-                @include tablet {
-                    width: 82%;
-                    height: 11vh;
-                    padding: 3%;
-                }
-                @include desktop {
-                    font-size: $h4-desktab-fontsize;
-                    width: 62%;
-                    height: 11vh;
-                    padding: 2%;
-                }
-            }
+            
         }
         
         &-title {
@@ -105,18 +87,11 @@ input {
             margin: 1% 0;
             font-size: $p-mobile-fontsize;
             font-weight: 500;
-            
-            @include tablet {
-                font-size: $p-desktab-fontsize;
-            }
-            @include desktop {
-                font-size: $p-desktab-fontsize;
-            }
         }
     }
     &__button {
         font-weight: 600;
-        letter-spacing: 0.8px;
+        letter-spacing: 0.5px;
         float: right;
         color: white;
         font-size: $h3-mobile-fontsize;
@@ -125,16 +100,10 @@ input {
         height: 50px;
                
         @include tablet {
-            font-size: $h4-desktab-fontsize;
-            width: 37%;
-            margin: 0 11.5% 5% 1%;
-            padding: 4%;
-        }
-        @include desktop {
-            font-size: $h4-desktab-fontsize;
-            width: 26%;
-            margin: 0 33.5% 3% 1%;
-            padding: 2.8%;
+            font-size: $h3-desktab-fontsize;
+            width: 27%;
+            margin: 0;
+            height: 50px;
         }
     }
 }

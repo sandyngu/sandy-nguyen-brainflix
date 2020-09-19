@@ -100,10 +100,6 @@
         &-likes {
             width: 17px;
             vertical-align: bottom;
-
-            @include tablet {
-                width: 20px;
-            }
         }
         &-views {
             vertical-align: bottom;

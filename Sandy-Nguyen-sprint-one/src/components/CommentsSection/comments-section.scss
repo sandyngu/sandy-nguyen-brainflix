@@ -49,6 +49,10 @@
     &-divider {
         width: 90%;
         margin: 0 auto;
+
+        @include tablet {
+            width: 94%;
+        }
     }
     &-container {
         margin: 2% auto;
