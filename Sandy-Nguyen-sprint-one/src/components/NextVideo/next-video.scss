@@ -10,9 +10,12 @@
         @include tablet {
             margin: 2.5% 0;
         }
+        @include desktop {
+            margin: 5% 0;
+        }
 
         &-thumbnail {
-            width: 41%;
+            width: 42%;
             max-width: 125px;
             height: 23vw;
             border-radius: 5px;
@@ -31,6 +34,9 @@
             @include tablet {
                 margin: 0 3%;
             }
+            @include desktop {
+                margin: 1% 5%;
+            }
         }
         &-title {
             margin: 0;
@@ -47,6 +53,9 @@
                 width: 200px;
                 line-height: 25px;
             }
+            @include desktop {
+                line-height: 23px;
+            }
 
         }
         &-author {
@@ -55,6 +64,9 @@
 
             @include tablet {
                 margin: 4% 0;
+            }
+            @include desktop {
+                font-size: $h4-desktab-fontsize;
             }
         }
     }

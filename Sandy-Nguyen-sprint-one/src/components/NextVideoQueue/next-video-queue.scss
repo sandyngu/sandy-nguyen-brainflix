@@ -10,5 +10,8 @@
         @include tablet {
             margin: 5.5% 0;
         }
+        @include desktop {
+            margin: 10% 0;
+        }
     }
 }

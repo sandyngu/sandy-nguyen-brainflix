@@ -20,6 +20,7 @@
             }
             @include desktop {
                 font-size: $h1-desktab-fontsize;
+                letter-spacing: 0.5px;
             }
         }
         &-container {
@@ -48,6 +49,11 @@
             color: $small-title-color;
             font-weight: normal;
             margin: 0;
+
+            @include tablet {
+                margin: 0.3% 0;
+            }
+
         }
         &-views-likes {
             display: flex;
@@ -60,15 +66,30 @@
             }
 
             @include desktop {
-                width: 37%;
+                margin: 0;
+                width: 32%;
             }
         }
         &-views {
             font-size: $h3-mobile-fontsize;
             padding-right: 8%;
+
+            @include tablet {
+                font-size: $h3-desktab-fontsize;
+            }
+            @include desktop {
+                font-size: $h3-desktab-fontsize;
+            }
         }
         &-likes {
             font-size: $h3-mobile-fontsize;
+
+            @include tablet {
+                font-size: $h3-desktab-fontsize;
+            }
+            @include desktop {
+                font-size: $h3-desktab-fontsize;
+            }
         }
         &-divider {
             margin: 0 auto;
@@ -79,10 +100,16 @@
             line-height: 19px;
 
             @include tablet {
+                font-size: $h3-desktab-fontsize;
                 margin: 4.5% 0;
                 line-height: 25px;
                 width: 76%;
-                font-size: $h3-desktab-fontsize;
+            }
+            @include desktop {
+                font-size: $h4-desktab-fontsize;
+                width: 76%;
+                letter-spacing: 0;
+                line-height: 22px;
             }
         }
     }

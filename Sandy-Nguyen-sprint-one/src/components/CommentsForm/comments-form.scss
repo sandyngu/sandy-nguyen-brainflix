@@ -22,6 +22,9 @@ input {
         @include tablet {
             margin: 8% 0 3% 0;
         }
+        @include desktop {
+            margin: 9% 0 4% 0;
+        }
     }
 
     &__photo {
@@ -34,7 +37,10 @@ input {
         margin: 7% 4.5% 6% 0;
 
         @include tablet {
-            margin: 3.2% 2% 0 0;
+            margin: 3.2% 2.5% 0 0;
+        }
+        @include desktop {
+            margin: 3.7% 3% 0 0;
         }
     }
 
@@ -55,6 +61,10 @@ input {
             width: 86%;
             height: 95px;
         }
+        @include desktop {
+            width: 86%;
+            height: 100px;
+        }
 
         &-title {
             letter-spacing: 0.3px;
@@ -74,12 +84,18 @@ input {
             min-height: 70px;
 
             @include tablet {
-                width: 63%;
-                height: 2.5vh;
-                padding: 2.2% 3% 3% 3%;
+                width: 65%;
+                padding: 2.2% 2.2% 3% 2.2%;
+                height: 13px;
                 min-height: 13px;
                 margin: 0.5% 0 5% 0;
             }  
+            @include desktop {
+                width: 63.5%;
+                padding: 2.4%;
+                height: 17px;
+                min-height: 17px;
+            }
         }
         
         &-title {
@@ -104,6 +120,9 @@ input {
             width: 27%;
             margin: 0.5% 0;
             height: 50px;
+        }
+        @include desktop {
+            width: 28%;
         }
     }
 }

@@ -18,7 +18,7 @@ function App() {
               <VideoDetails />
               <CommentsSection />
             </section>
-            <section className="sub-section">
+            <section className="side-section">
               <NextVideoQueue />
             </section>
         </div>

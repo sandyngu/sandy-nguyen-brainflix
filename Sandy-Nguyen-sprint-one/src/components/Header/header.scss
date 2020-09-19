@@ -4,6 +4,13 @@
 ::placeholder {
     color: $primary-background-color;
     font-size: $h3-mobile-fontsize;
+
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
 }
 
 button {
@@ -27,10 +34,10 @@ button {
             display: flex;
             justify-content: space-between;
             padding-bottom: 0;
-            margin: 0 1%;
+            margin: 0 3%;
         }
         @include desktop {
-            margin: 0 10%;
+            margin: 0 9%;
         }
     }
     &__logo-container {
@@ -43,11 +50,11 @@ button {
     }
     &__logo {
         margin: 8% 0 0 0;
-        height: 28px;
+        height: 26px;
 
         @include tablet {
             align-items: center;
-            margin: 20% 0 20% 15%;
+            margin: 20% 0;
         }
     }
     &__container {
@@ -56,10 +63,9 @@ button {
         flex-wrap: wrap;
 
         @include tablet {
-            width: 60%;
+            width: 63%;
             flex-wrap: nowrap;
             justify-content: space-between;
-            margin: 0 2%;
             align-items: center;
         }
         @include desktop {
@@ -124,7 +130,7 @@ button {
         max-width: 410px;
 
         @include tablet {
-            width: 60%;
+            width: 63%;
         }
         @include desktop {
             width: 60%;
