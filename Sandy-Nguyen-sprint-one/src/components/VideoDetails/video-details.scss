@@ -12,9 +12,28 @@
         &-title {
             margin: 6% 5% 4% 5%;
             line-height: 35px;
+
+            @include tablet {
+                line-height: 50px;
+                margin: 4% 3% 2% 3%;
+            }
+        }
+        &-container {
+
+            @include tablet {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 5% 3% 1%;
+            }
         }
         &-author-date {
             display: flex;
+
+            @include tablet {
+                width: 50%;
+                align-items: flex-end;
+            }
         }
         &-author {
             margin: 0 5%;
@@ -24,11 +43,20 @@
             color: $small-title-color;
             font-weight: normal;
             margin: 0;
+
+            @include tablet {
+                margin-bottom: 0.5%;
+            }
         }
         &-views-likes {
             display: flex;
             align-items: center;
             margin: 7% 5%;
+
+            @include tablet {
+                margin: 0;
+                width: 30%;
+            }
         }
         &-views {
             font-size: $h3-mobile-fontsize;
@@ -40,11 +68,22 @@
         &-divider {
             width: 92.5%;
             margin: 0 auto;
+
+            @include tablet {
+                width: 94%;
+            }
         }
         &-description {
             margin: 7% 5%;
             letter-spacing: 0.1px;
             line-height: 19px;
+
+            @include tablet {
+                margin: 4.5% 3%;
+                line-height: 25px;
+                width: 71%;
+                font-size: $h3-desktab-fontsize;
+            }
         }
     }
     
@@ -53,9 +92,18 @@
         height: 20px;
         vertical-align: bottom;
 
+        @include tablet {
+            width: 25px;
+            padding-right: 5px;
+        }
+
         &-likes {
             width: 17px;
             vertical-align: bottom;
+
+            @include tablet {
+                width: 20px;
+            }
         }
         &-views {
             vertical-align: bottom;

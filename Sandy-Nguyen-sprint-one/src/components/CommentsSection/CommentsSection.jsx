@@ -39,7 +39,7 @@ const CommentsBox = (props) => {
     )
 }
 
-function CommentsSection(props) {
+function CommentsSection() {
 
     return (
         <section className="sub-section">

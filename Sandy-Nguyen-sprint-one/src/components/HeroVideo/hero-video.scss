@@ -6,6 +6,11 @@
     &-video {
         width: 100%;
         position: relative;
+        
+        @include tablet {
+            background: black;
+            object-fit: 50%;
+        }
 
         &-button {
             background-color: rgba(0,0,0,0.4);
@@ -27,6 +32,10 @@
             
             &-scrubber {
                 width: 40%;
+
+                @include tablet {
+                    width: 60%;
+                }
             }
             &-fullscreen {
                 padding-right: 15%;

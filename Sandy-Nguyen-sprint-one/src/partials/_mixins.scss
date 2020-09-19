@@ -25,10 +25,10 @@ h1 {
         font-size: $h1-mobile-fontsize;
     }
     @include tablet {
-        font-size: $hero-desktab-fontsize;
+        font-size: $h1-desktab-fontsize;
     }
     @include desktop {
-        font-size: $hero-desktab-fontsize;
+        font-size: $h1-desktab-fontsize;
     }
 }
 h2 {
@@ -69,9 +69,9 @@ p {
         font-size: $p-mobile-fontsize;
     }
     @include tablet {
-        font-size: $h4-desktab-fontsize;
+        font-size: $p-desktab-fontsize;
     }
     @include desktop {
-        font-size: $h4-desktab-fontsize;
+        font-size: $p-desktab-fontsize;
     }
 }    
