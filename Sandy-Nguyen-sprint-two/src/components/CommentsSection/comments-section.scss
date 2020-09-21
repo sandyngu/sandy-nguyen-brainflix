@@ -1,0 +1,95 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+.comments-section__guestbook {
+    margin: 0 auto;
+    font-size: $h3-mobile-fontsize;
+    
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
+    
+    &-entry {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2% 0;
+        justify-content: space-between;
+
+        @include tablet {
+            justify-content: flex-start;
+            margin: 1.5% 0 0 0;
+            width: 90%;
+        }
+        @include desktop {
+            width: 95%;
+        }
+
+    }
+    &-photo {
+        background-color: $circle-divider-color;
+        height: 40px;
+        border-radius: 50%;
+        min-width: 40px;
+        margin: 5% 5% 5% 0;
+
+        @include tablet {
+            height: 45px;
+            min-width: 45px;
+            margin: 1% 2% 0 0;
+        }
+        @include desktop {
+            height: 40px;
+            min-width: 40px;
+        }
+        
+    }
+    &-container {
+        margin: 2% auto;
+        display: flex;
+    }
+    &-name {
+        display: inline-flex;
+        font-weight: 500;
+        margin: 6% 0 0 0;
+        font-size: $h3-mobile-fontsize;
+
+        @include tablet {
+            font-size: $h2-desktab-fontsize;
+            margin: 0 2% 0 0;
+        }
+        @include desktop {
+            font-size: $h3-desktab-fontsize;
+        }
+
+    }
+    &-date {
+        display: inline-flex;
+        margin: 6% 0 0 0;
+        color: $small-title-color;
+
+        @include tablet {
+            font-size: $h3-desktab-fontsize;
+            margin: 0.1% 0 0 0;
+        }
+        @include desktop {
+            font-size: $h4-desktab-fontsize;
+            margin: 0.2% 0 0 0;
+        }
+    }
+    &-text {
+        margin: 4% 0;
+        display: inline-flex;
+        width: 99.5%;
+        line-height: 20px;
+
+        @include tablet {
+            margin: 1% 0;
+        }
+        @include desktop {
+            width: 95%;
+        }
+    }
+}

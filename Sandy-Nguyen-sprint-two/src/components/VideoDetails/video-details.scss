@@ -1,0 +1,141 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+.divider {
+    border-bottom: 2px solid $circle-divider-color;
+}
+
+.main__video {
+
+    &-details {
+
+        &-title {
+            margin: 6% 0 5% 0;
+            line-height: 35px;
+
+            @include tablet {
+                font-size: $hero-desktab-fontsize;
+                line-height: 50px;
+                margin: 5% 0 1.5% 0;
+            }
+            @include desktop {
+                font-size: $h1-desktab-fontsize;
+                letter-spacing: 0.5px;
+            }
+        }
+        &-container {
+
+            @include tablet {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 3%;
+                width: 98%;
+            }
+        }
+        &-author-date {
+            display: flex;
+
+            @include tablet {
+                width: 50%;
+                align-items: flex-end;
+            }
+        }
+        &-author {
+            margin: 0 3% 0 0;
+            font-weight: 500;
+
+            @include desktop {
+                font-size: $h3-desktab-fontsize;
+            }
+        }
+        &-date {
+            color: $small-title-color;
+            font-weight: normal;
+            margin: 0;
+
+            @include desktop {
+                font-size: $h4-desktab-fontsize;
+                margin: 0.3% 0;
+            }
+
+        }
+        &-views-likes {
+            display: flex;
+            align-items: center;
+            margin: 7% 0;
+
+            @include tablet {
+                margin: 0;
+                width: 30%;
+            }
+
+            @include desktop {
+                margin: 0;
+                width: 32%;
+            }
+        }
+        &-views {
+            font-size: $h3-mobile-fontsize;
+            padding-right: 8%;
+
+            @include tablet {
+                font-size: $h3-desktab-fontsize;
+            }
+            @include desktop {
+                font-size: $h4-desktab-fontsize;
+            }
+        }
+        &-likes {
+            font-size: $h3-mobile-fontsize;
+
+            @include tablet {
+                font-size: $h3-desktab-fontsize;
+            }
+            @include desktop {
+                font-size: $h4-desktab-fontsize;
+            }
+        }
+        &-divider {
+            margin: 0 auto;
+        }
+        &-description {
+            margin: 7% 0;
+            letter-spacing: 0.1px;
+            line-height: 19px;
+
+            @include tablet {
+                font-size: $h3-desktab-fontsize;
+                margin: 4.5% 0;
+                line-height: 25px;
+                width: 78%;
+            }
+            @include desktop {
+                font-size: $h4-desktab-fontsize;
+                width: 74%;
+                letter-spacing: 0;
+                line-height: 22px;
+            }
+        }
+    }
+    
+    &-icon {
+        width: 22px;
+        height: 20px;
+        vertical-align: bottom;
+        padding-right: 5px;
+
+        @include tablet {
+            width: 25px;
+        }
+
+        &-likes {
+            width: 17px;
+            vertical-align: bottom;
+        }
+        &-views {
+            vertical-align: bottom;
+        }
+    }
+    
+}

@@ -1,0 +1,88 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+.main__hero {
+
+    &-video-container {
+        background-color: black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+    &-video {
+        width: 100vw;  
+
+        @include tablet {
+            width: 91vw;
+        }
+        @include desktop {
+            width: 72vw;
+        }
+
+        &-button {
+            background-color: rgba(0,0,0,0.4);
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            vertical-align: center;
+            padding: 8px 16px;
+        }
+        &-icon {
+            width: 20px;
+            height: 20px;
+        }
+        &-time {
+            display: none;
+            margin: 0;
+            color: white;
+
+            @include tablet {
+                display: block;
+            }
+        }    
+        &-scrubber-container {  
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 2%;
+            width: 100%;
+        }
+
+        &-controls {
+            display: flex;
+            justify-content: space-evenly;
+            position: absolute;
+            margin: 0 5%;
+            bottom: 10px;
+            width: 90%;
+
+            @include tablet {
+                width: 88%;
+            }
+            @include desktop {
+                width: 69%;
+            }
+      
+            &-scrubber {
+                width: 100%;
+                vertical-align: center;
+                
+                @include tablet {
+                    width: 85%;
+                    padding-right: 10px;
+                }
+                @include desktop {
+                    width: 87%;
+                }
+            }
+            &-fullscreen {
+                padding-right: 30%;
+            }
+            &-volume {
+                margin-right: 0;
+                padding-left: 0;
+            }
+        }
+    }   
+}

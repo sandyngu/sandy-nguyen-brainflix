@@ -1,0 +1,168 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+::placeholder {
+    color: $primary-background-color;
+    font-size: $h3-mobile-fontsize;
+
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
+}
+
+button {
+    background-color: $button-color;
+    border: none;
+    border-radius: 4px;
+    width: 70%;
+    height: 55px;
+    color: white;
+    font-size: $h3-mobile-fontsize;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $button-hover-color;
+    }
+}
+
+input:focus {
+        border: $button-color 2px solid;
+        outline: none;
+}
+
+.header {
+
+    &__parent {
+        padding-bottom: 5%;
+        margin: 0 5%;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0;
+            margin: 0 3%;
+        }
+        @include desktop {
+            margin: 0 9%;
+        }
+    }
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+    &__logo {
+        margin: 8% 0 0 0;
+        height: 26px;
+
+        @include tablet {
+            align-items: center;
+            margin: 20% 0;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include tablet {
+            width: 63%;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include desktop {
+            width: 45%;
+        }
+    }
+    &__upload-photo-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        max-width: 490px;
+
+        @include tablet {
+            justify-content: space-between;
+            width: 38%;
+        }
+        @include desktop {
+            width: 40%;
+        }
+    }
+    &__search-bar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        @include tablet {
+            width: 60%;
+        }
+        @include desktop {
+            width: 57%;
+        }
+        
+        &-input {
+            font-family: 'Avenir';
+            background-image: url('../../assets/icons/SVG/Icon-search.svg');
+            background-repeat: no-repeat;
+            background-color: $secondary-background-color;
+            background-position: 15px;
+            padding: 18px 40px 15px 40px;
+            border: $circle-divider-color 2px solid;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 408px;
+            height: 50px;
+            max-height: 17px;
+            margin: 2% auto 3% auto;
+
+            @include tablet {
+                justify-content: flex-end;
+                width: 60%;
+                margin: 0;
+            }
+        }
+    }
+    &__upload-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+        height: 50px;
+        width: 78%;
+        max-width: 410px;
+
+        @include tablet {
+            width: 63%;
+            height: 53px;
+        }
+        @include desktop {
+            width: 60%;
+        }
+        
+        &-icon {
+            width: 18px;
+            height: 20px;
+            padding: 0 5% 1% 0;
+        }
+    }
+    &__circle-photo {
+        background-image: url('../../assets/images/Mohan-muruge.jpg');
+        background-size: cover;
+        background-position: 15%;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-left: 4.5%;
+
+        @include tablet {
+            margin-left: 5%;
+        }
+    }
+}
