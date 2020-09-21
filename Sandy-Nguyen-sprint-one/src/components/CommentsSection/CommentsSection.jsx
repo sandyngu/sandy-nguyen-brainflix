@@ -23,7 +23,7 @@ const commentsList = [
     }
 ];
 
-const CommentsBox = (props) => {
+function CommentsBox(props) {
     return ( 
         <div className="comments-section__guestbook">
             <div className="comments-section__guestbook-container">
