@@ -131,6 +131,7 @@ button {
 
         @include tablet {
             width: 63%;
+            height: 53px;
         }
         @include desktop {
             width: 60%;
