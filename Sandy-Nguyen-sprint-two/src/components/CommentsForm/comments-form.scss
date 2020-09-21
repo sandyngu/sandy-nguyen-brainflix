@@ -18,6 +18,7 @@ textarea:focus {
     border: $button-color 2px solid;
     outline: none;
 }
+
 .comments-section {
     padding-bottom: 11%;
 
@@ -83,10 +84,10 @@ textarea:focus {
             background-color: $secondary-background-color;
             border: 2.5px solid $circle-divider-color;
             outline: none;
-            border-radius: 5px;
+            border-radius: 4px;
             margin: 1% 0 5% 0;
             resize: none;
-            width: 86%;
+            width: 85%;
             height: 10vh;
             padding: 15px 15px;
             min-height: 65px;

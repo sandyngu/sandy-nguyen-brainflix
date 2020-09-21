@@ -1,0 +1,87 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+input, textarea {
+    font-family:'Avenir';
+    font-size: $h3-mobile-fontsize;
+
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h3-desktab-fontsize;
+    }
+}
+
+.upload-section {
+    margin: 0 5%;
+
+    &__divider--thin {
+        border-bottom: 1px solid $circle-divider-color;
+    }
+    &__heading { 
+        margin: 12% auto;
+    }
+    &__video {
+
+        &-title {
+            font-weight: 500;
+            color: $small-title-color;
+            letter-spacing: 0.3px;
+            margin: 0;
+        }
+        &-thumbnail {
+            width: 100%;
+            border-radius: 5px;
+            margin: 2% 0 7% 0;
+        }
+    }
+    &__form-container {
+        display: flex;
+    }
+    &__form {
+        width: 100%;
+
+        &-title {
+            color: $small-title-color;
+            margin: 1% 0;
+            font-size: $p-mobile-fontsize;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }    
+        &-input {
+            background-color: $secondary-background-color;
+            border: 2px solid $circle-divider-color;
+            outline: none;
+            border-radius: 4px;
+            margin: 1% 0 7% 0;
+            resize: none;
+            width: fill;
+            padding: 15px 15px;
+
+            &-description {
+                height: 18vh;
+            }
+        }
+    }
+    &__divider--hidden {
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+    }
+    &__form-options {
+
+        &-publish {
+            width: 100%;
+        }
+        &-cancel {
+            font-weight: 600;
+            color: $button-color;
+            text-align: center;
+            margin: 9% auto;
+        }
+    }
+    
+}
