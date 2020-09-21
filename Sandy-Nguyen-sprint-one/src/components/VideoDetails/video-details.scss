@@ -10,7 +10,7 @@
     &-details {
 
         &-title {
-            margin: 6% 0 4% 0;
+            margin: 6% 0 5% 0;
             line-height: 35px;
 
             @include tablet {
@@ -44,13 +44,18 @@
         &-author {
             margin: 0 3% 0 0;
             font-weight: 500;
+
+            @include desktop {
+                font-size: $h3-desktab-fontsize;
+            }
         }
         &-date {
             color: $small-title-color;
             font-weight: normal;
             margin: 0;
 
-            @include tablet {
+            @include desktop {
+                font-size: $h4-desktab-fontsize;
                 margin: 0.3% 0;
             }
 
@@ -78,7 +83,7 @@
                 font-size: $h3-desktab-fontsize;
             }
             @include desktop {
-                font-size: $h3-desktab-fontsize;
+                font-size: $h4-desktab-fontsize;
             }
         }
         &-likes {
@@ -88,7 +93,7 @@
                 font-size: $h3-desktab-fontsize;
             }
             @include desktop {
-                font-size: $h3-desktab-fontsize;
+                font-size: $h4-desktab-fontsize;
             }
         }
         &-divider {
@@ -103,11 +108,11 @@
                 font-size: $h3-desktab-fontsize;
                 margin: 4.5% 0;
                 line-height: 25px;
-                width: 76%;
+                width: 78%;
             }
             @include desktop {
                 font-size: $h4-desktab-fontsize;
-                width: 76%;
+                width: 74%;
                 letter-spacing: 0;
                 line-height: 22px;
             }
@@ -118,10 +123,10 @@
         width: 22px;
         height: 20px;
         vertical-align: bottom;
+        padding-right: 5px;
 
         @include tablet {
             width: 25px;
-            padding-right: 5px;
         }
 
         &-likes {

@@ -3,6 +3,18 @@
 
 .sub-section {
 
+    &__heading {
+        font-weight: 500;
+        color: $small-title-color;
+        margin: 11% 0;
+
+        @include tablet {
+            margin: 5.5% 0;
+        }
+        @include desktop {
+            margin: 14% 0 13% 0;
+        }
+    }
     &__next-video {
         display: flex;
         margin: 7% 0 6% 0;
@@ -15,18 +27,10 @@
         }
 
         &-thumbnail {
-            width: 42%;
-            max-width: 125px;
-            height: 23vw;
+            width: 120px;
+            height: 72px;
             border-radius: 5px;
-            object-fit: cover;
-
-            @include tablet {
-                height: 10vw;
-            }
-            @include desktop {
-                height: 6.5vw;
-            }
+            object-fit: cover;  
         }
         &-content {
             margin: 2% 5%;
@@ -35,7 +39,7 @@
                 margin: 0 3%;
             }
             @include desktop {
-                margin: 1% 5%;
+                margin: 0.5% 5%;
             }
         }
         &-title {
@@ -51,10 +55,12 @@
                 overflow: visible;
                 white-space: normal;
                 width: 200px;
-                line-height: 25px;
+                line-height: 23px;
             }
             @include desktop {
+                font-size: $h3-desktab-fontsize;
                 line-height: 23px;
+                width: 180px;
             }
 
         }

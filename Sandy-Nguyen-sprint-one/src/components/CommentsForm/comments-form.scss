@@ -23,7 +23,8 @@ input {
             margin: 8% 0 3% 0;
         }
         @include desktop {
-            margin: 9% 0 4% 0;
+            font-size: $h3-desktab-fontsize;
+            margin: 8.5% 0 4% 0;
         }
     }
 
@@ -52,18 +53,19 @@ input {
         @include tablet {
             flex-wrap: nowrap;
             justify-content: flex-start;
+            margin: 0.5% 0;
         }
     }
     &__form {
         width: 78%;
 
         @include tablet {
-            width: 86%;
+            width: 87%;
             height: 95px;
         }
         @include desktop {
             width: 86%;
-            height: 100px;
+            height: 93px;
         }
 
         &-title {
@@ -71,30 +73,31 @@ input {
         }
         
         &-input {
+            font-family: 'Avenir';
             background-color: $secondary-background-color;
             border: 2.5px solid $circle-divider-color;
             outline: none;
             border-radius: 5px;
             margin: 1% 0 5% 0;
             resize: none;
-            font-family: 'Avenir';
             width: 86%;
             height: 10vh;
             padding: 6%;
-            min-height: 70px;
+            min-height: 65px;
+            max-height: 75px;
 
             @include tablet {
                 width: 65%;
-                padding: 2.2% 2.2% 3% 2.2%;
-                height: 13px;
-                min-height: 13px;
+                padding: 14px;
+                height: 18px;
+                min-height: 18px;
                 margin: 0.5% 0 5% 0;
             }  
             @include desktop {
                 width: 63.5%;
-                padding: 2.4%;
-                height: 17px;
-                min-height: 17px;
+                padding: 14px;
+                height: 18px;
+                min-height: 18px;
             }
         }
         
@@ -122,6 +125,7 @@ input {
             height: 50px;
         }
         @include desktop {
+            font-size: $h3-desktab-fontsize;
             width: 28%;
         }
     }
