@@ -89,10 +89,10 @@ input:focus {
 
         @include tablet {
             justify-content: space-between;
-            width: 38%;
+            width: 37%;
         }
         @include desktop {
-            width: 40%;
+            width: 39%;
         }
     }
     &__search-bar {
@@ -101,10 +101,10 @@ input:focus {
         width: 100%;
 
         @include tablet {
-            width: 60%;
+            width: 61%;
         }
         @include desktop {
-            width: 57%;
+            width: 58%;
         }
         
         &-input {
@@ -143,7 +143,7 @@ input:focus {
             height: 53px;
         }
         @include desktop {
-            width: 60%;
+            width: 62%;
         }
         
         &-icon {
