@@ -22,9 +22,10 @@ function Upload() {
                         <br/><label className="upload-section__form-title">ADD A VIDEO DESCRIPTION</label>
                         <br/><textarea type="text" className="upload-section__form-input upload-section__form-input-description" placeholder="Add a description of your video"/>
                         <div className="divider upload-section__divider upload-section__divider--hidden"></div>
-                        <div className=" upload-section__form-options"></div>
+                        <div className=" upload-section__form-options">
                             <button className="upload-section__form-options-publish">PUBLISH</button>
                             <h3 className="upload-section__form-options-cancel">CANCEL</h3>
+                        </div>
                     </form>
                 </div>
             </div>

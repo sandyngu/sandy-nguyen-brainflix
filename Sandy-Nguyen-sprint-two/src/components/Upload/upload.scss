@@ -16,11 +16,20 @@ input, textarea {
 .upload-section {
     margin: 0 5%;
 
+    @include tablet {
+        margin: 0 3%;
+    }
+
     &__divider--thin {
         border-bottom: 1px solid $circle-divider-color;
     }
     &__heading { 
         margin: 12% auto;
+
+        @include tablet {
+            font-size: $hero-desktab-fontsize;
+            margin: 7% 0 4% 0;
+        }
     }
     &__video {
 
@@ -29,11 +38,21 @@ input, textarea {
             color: $small-title-color;
             letter-spacing: 0.3px;
             margin: 0;
+            
+            @include tablet {
+                margin-top: 6%;
+            }
         }
         &-thumbnail {
             width: 100%;
+            max-width: 350px;
             border-radius: 5px;
             margin: 2% 0 7% 0;
+
+            @include tablet {
+                margin: 1% 0 4% 0;
+                width: 50%;
+            }
         }
     }
     &__form-container {
@@ -59,8 +78,16 @@ input, textarea {
             width: fill;
             padding: 15px 15px;
 
+            @include tablet {
+                margin: 0.3% 0 3% 0;
+            }
+
             &-description {
                 height: 18vh;
+
+                @include tablet {
+                    margin-bottom: 4.5%;
+                }
             }
         }
     }
@@ -69,18 +96,36 @@ input, textarea {
 
         @include tablet {
             display: block;
+            margin-bottom: 5%;
         }
     }
     &__form-options {
+        padding-bottom: 20%;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            
+        }
 
         &-publish {
             width: 100%;
+
+            @include tablet {
+                width: 23%;
+            }
         }
         &-cancel {
+            font-size: $h3-mobile-fontsize;
             font-weight: 600;
             color: $button-color;
             text-align: center;
             margin: 9% auto;
+
+            @include tablet {
+                margin: 0 7%;
+            }
         }
     }
     
