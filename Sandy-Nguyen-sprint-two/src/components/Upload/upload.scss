@@ -57,16 +57,18 @@ input, textarea {
         }
         &-thumbnail {
             width: 100%;
-            max-width: 350px;
+            max-width: 500px;
             border-radius: 5px;
             margin: 2% 0 7% 0;
 
             @include tablet {
                 margin: 1% 0 4% 0;
                 width: 50%;
+                max-width: 700px;
             }
             @include desktop {
                 width: 100%;
+                max-width: 500px;
             }
         }
     }
@@ -74,10 +76,11 @@ input, textarea {
 
         @include desktop {
             display: flex;
+            margin-bottom: 2%;
         }
     }
     &__form-container {
-        width: fill;
+        width: 100%;
     }
     &__form {
 
@@ -99,7 +102,7 @@ input, textarea {
             border-radius: 4px;
             margin: 1% 0 7% 0;
             resize: none;
-            width: fill;
+            width: stretch;
             padding: 15px 15px;
 
             @include tablet {
@@ -113,7 +116,9 @@ input, textarea {
                     margin-bottom: 4.5%;
                 }
                 @include desktop {
-                    height: 7vh;
+                    height: 7.5vh;
+                    margin: 0;
+
                 }
             }
         }
