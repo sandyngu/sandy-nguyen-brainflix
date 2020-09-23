@@ -33,7 +33,7 @@
                 width: 98%;
             }
         }
-        &-author-date {
+        &-channel-date {
             display: flex;
 
             @include tablet {
@@ -41,7 +41,7 @@
                 align-items: flex-end;
             }
         }
-        &-author {
+        &-channel {
             margin: 0 3% 0 0;
             font-weight: 500;
 

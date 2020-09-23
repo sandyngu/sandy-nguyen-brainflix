@@ -14,7 +14,7 @@ const Header = () => {
             </div>
             <div className="header__container">
                 <form className="header__search-bar">
-                    <input type="text" className="header__search-bar-input" placeholder="Search"/>
+                    <input type="text" name="search" className="header__search-bar-input" placeholder="Search"/>
                 </form>
                 <div className="header__upload-photo-container">
                     <Link to='/upload'>

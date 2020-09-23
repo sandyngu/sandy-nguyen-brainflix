@@ -6,13 +6,15 @@ import Volume from '../../assets/icons/SVG/Icon-volume.svg';
 import Line from '../../assets/icons/PNG/Icon-line.png';
 import './hero-video.scss'
 
-const HeroVideo = () => {
-    return (
-        <div className="main__hero-video-container">
-            <video poster={Poster} src="../../assets/video/BrainStation Sample Video.mp4" type="video/mp4" className="main__hero-video"/>
-            <VideoControls />
-        </div>
-    )
+class HeroVideo extends React.Component {
+    render() {
+        return (
+            <div className="main__hero-video-container">
+                <video poster={Poster} src="../../assets/video/BrainStation Sample Video.mp4" type="video/mp4" className="main__hero-video"/>
+                <VideoControls />
+            </div>
+        )
+    }
 }
 
 export default HeroVideo;

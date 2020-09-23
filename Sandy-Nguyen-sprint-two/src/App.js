@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import HeroVideo from './components/HeroVideo/HeroVideo';
-import HeroVideoDetails from './components/VideoDetails/VideoDetails';
+import HeroVideoDetails from './components/HeroVideoDetails/HeroVideoDetails';
 import NextVideoQueue from './components/NextVideo/NextVideo';
 import CommentsSection from './components/CommentsSection/CommentsSection';
 import Upload from './components/Upload/Upload';
@@ -44,18 +44,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
         <Switch>
           <Route path='/' exact>
             <div className="App">   
                 <section className="header">
                     <Header />
                 </section>   
-                <HeroVideo />
+                <HeroVideo videoList={this.state.videoList}/>
                 <div className="section-container">
                     <section className="main-section">
-                      <HeroVideoDetails />
-                      <CommentsSection />
+                      <HeroVideoDetails videoList={this.state.videoList}/>
+                      <CommentsSection videoList={this.state.videoList}/>
                     </section>
                     <section className="side-section">
                       <NextVideoQueue videoList={this.state.videoList} />
@@ -65,7 +64,6 @@ class App extends React.Component {
           </Route>
           <Route path='/upload' component={Upload}/>
         </Switch>
-      </BrowserRouter>
     );
   }
 }
