@@ -3,6 +3,19 @@ import ViewsIcon from '../../assets/icons/SVG/Icon-views.svg'
 import LikesIcon from '../../assets/icons/SVG/Icon-likes.svg'
 import './hero-video-details.scss';
 
+class HeroVideoDetails extends React.Component {
+
+    render() {   
+        return (    
+            <div className="main__video-details">
+                {this.props.heroVideo.map(currentVideoDetailsInfo => 
+                <HeroVideoText key={currentVideoDetailsInfo.id} title={currentVideoDetailsInfo.title} channel={currentVideoDetailsInfo.channel} date={currentVideoDetailsInfo.timestamp} views={currentVideoDetailsInfo.views} likes={currentVideoDetailsInfo.likes} description={currentVideoDetailsInfo.description} /> )}          
+            </div>       
+        );
+    };
+};
+
+export default HeroVideoDetails;
 
 function HeroVideoText(props) {
     const { title, channel, date, views, likes, description } = props;
@@ -24,33 +37,3 @@ function HeroVideoText(props) {
         </div>
     )
 };
-
-class HeroVideoDetails extends React.Component {
-    
-    // state = {
-    //     currentVideoDetails: [
-    
-    //         {
-    //             id: 0,
-    //             title: 'BMX Rampage: 2018 Highlights',
-    //             channel: 'By Red Cow',
-    //             date: '12/18/2018',
-    //             views: '1,001,023',
-    //             likes: '110,985',
-    //             description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title'
-    //         }
-    //     ]
-    // }
-
-    render() {   
-        return (    
-            <div className="main__video-details">
-                {this.props.heroVideo.map(currentVideoDetailsInfo => 
-                <HeroVideoText key={currentVideoDetailsInfo.id} title={currentVideoDetailsInfo.title} channel={currentVideoDetailsInfo.channel} date={currentVideoDetailsInfo.timestamp} views={currentVideoDetailsInfo.views} likes={currentVideoDetailsInfo.likes} description={currentVideoDetailsInfo.description} /> )}          
-            </div>       
-        );
-    };
-};
-
-export default HeroVideoDetails;
-

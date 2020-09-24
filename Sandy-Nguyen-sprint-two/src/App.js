@@ -14,7 +14,7 @@ let videosURL = `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_ke
 
 class App extends React.Component {
   state = {
-    heroVideo: [],
+    heroVideoDetails: [],
     commentsList: []
   }
 
@@ -23,8 +23,8 @@ class App extends React.Component {
     .then(res => {
       console.log(res.data.comments, res.data)
       this.setState({
-        heroVideo: [res.data],
-        commentsList: res.data.comments
+        heroVideoDetails: [res.data],
+        commentsList: res.data.comments     
       })
     })
     .catch(err => console.log(err));
@@ -38,10 +38,10 @@ class App extends React.Component {
                 <section className="header">
                     <Header />
                 </section>   
-                <HeroVideo />
+                <HeroVideo heroVideo={this.state.heroVideoDetails}/>
                 <div className="section-container">
                     <section className="main-section">
-                      <HeroVideoDetails heroVideo={this.state.heroVideo}/>
+                      <HeroVideoDetails heroVideo={this.state.heroVideoDetails}/>
                       <CommentsSection heroVideo={this.state.commentsList}/>
                     </section>
                     <section className="side-section">
