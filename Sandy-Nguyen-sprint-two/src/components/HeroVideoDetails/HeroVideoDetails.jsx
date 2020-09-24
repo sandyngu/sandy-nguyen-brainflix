@@ -1,10 +1,8 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import ViewsIcon from '../../assets/icons/SVG/Icon-views.svg'
 import LikesIcon from '../../assets/icons/SVG/Icon-likes.svg'
 import './hero-video-details.scss';
-
-// let videosURL = 'https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=110f950a-c58f-42c6-969e-3e58a775af61';
 
 function HeroVideoText(props) {
     const { title, channel, date, views, likes, description } = props;

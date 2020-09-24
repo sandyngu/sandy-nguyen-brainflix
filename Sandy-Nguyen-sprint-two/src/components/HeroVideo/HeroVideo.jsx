@@ -19,7 +19,7 @@ class HeroVideo extends React.Component {
 
 export default HeroVideo;
 
-const VideoControls = () => {
+function VideoControls() {
     return (
         <div className="main__hero-video-controls">
             <img src={Play} className="main__hero-video-button main__hero-video-icon main__hero-video-controls-play" alt="Play Icon"/>

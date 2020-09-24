@@ -28,9 +28,9 @@ button {
     }
 }
 
-input:focus {
-        border: $button-color 2px solid;
-        outline: none;
+input:focus { 
+    border: $button-color 2px solid;
+    outline: none;
 }
 
 .header {
@@ -121,6 +121,12 @@ input:focus {
             height: 50px;
             max-height: 17px;
             margin: 2% auto 3% auto;
+
+            &:focus {
+                background-image: url('../../assets/icons/SVG/Icon-search.svg');
+                background-repeat: no-repeat;
+                background-position: 15px;
+            }
 
             @include tablet {
                 justify-content: flex-end;

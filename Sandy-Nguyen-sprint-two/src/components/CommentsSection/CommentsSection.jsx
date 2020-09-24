@@ -29,11 +29,11 @@ class CommentsSection extends React.Component {
     componentDidMount() {
         axios.get(videosURL)
             .then(res => {
-              console.log(res.data.comments)
               this.setState({
-                commentsList: res.data.comments})
-              });
-      }
+                commentsList: res.data.comments
+                })
+            });
+    }
     render() {
         return (
             <section className="sub-section">

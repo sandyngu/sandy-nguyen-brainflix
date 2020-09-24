@@ -9,29 +9,15 @@ import CommentsSection from './components/CommentsSection/CommentsSection';
 import Upload from './components/Upload/Upload';
 import './App.css';
 
-let videosURL = 'https://project-2-api.herokuapp.com/videos?api_key=110f950a-c58f-42c6-969e-3e58a775af61';
+const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
+let videosURL = 'https://project-2-api.herokuapp.com/videos?api_key=API_KEY';
+let videosURL2 = 'https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=API_KEY';
 
 class App extends React.Component {
   state = {
-    videoList: []
+    videoList: [],
+    heroVideo: []
   }
-
-  // heroVid = (id) => {
-  //   axios.put(`https://project-2-api.herokuapp.com/videos/${id}?api_key=110f950a-c58f-42c6-969e-3e58a775af61`)
-  //       .then(res => {
-  //         let index = this.state.videoList.findIndex((video) => video.id === id);
-          
-  //         let updatedList = this.state.videoList;
-  //         updatedList.splice(index, 1)
-
-  //         this.setState({
-  //             videoList: updatedList
-  //         })
-  //     })
-  //     .catch(err => {
-  //         console.log(err)
-  //     })
-  // }
 
   componentDidMount() {
     axios.get(videosURL)
@@ -39,7 +25,8 @@ class App extends React.Component {
           console.log(res.data)
           this.setState({
             videoList: res.data})
-          });
+          })
+        .catch(err => console.log(err));
   }
 
   render() {
@@ -50,14 +37,14 @@ class App extends React.Component {
                 <section className="header">
                     <Header />
                 </section>   
-                <HeroVideo videoList={this.state.videoList}/>
+                <HeroVideo />
                 <div className="section-container">
                     <section className="main-section">
-                      <HeroVideoDetails videoList={this.state.videoList}/>
-                      <CommentsSection videoList={this.state.videoList}/>
+                      <HeroVideoDetails />
+                      <CommentsSection />
                     </section>
                     <section className="side-section">
-                      <NextVideoQueue videoList={this.state.videoList} />
+                      <NextVideoQueue videoList={this.state.videoList}/>
                     </section>
                 </div>
             </div>
@@ -70,6 +57,5 @@ class App extends React.Component {
 
 export default App;
 
-// const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
 
 

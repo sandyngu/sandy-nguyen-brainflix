@@ -4,7 +4,7 @@ import Logo from '../../assets/logo/Logo-brainflix.svg';
 import UploadIcon from '../../assets/icons/SVG/Icon-upload.svg';
 import './header.scss'
 
-const Header = () => {
+function Header() {
     return (
         <header className="header__parent">
             <div className="header__logo-container">
