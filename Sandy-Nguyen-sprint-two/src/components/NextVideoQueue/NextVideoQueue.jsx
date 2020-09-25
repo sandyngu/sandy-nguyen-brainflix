@@ -12,7 +12,7 @@ class NextVideoQueue extends React.Component {
     componentDidMount() {
         axios.get(`https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`)
         .then(res => {
-            console.log(res.data)
+            /*console.log(res.data)*/
           this.setState({
             videoList: res.data})
           })
@@ -21,11 +21,11 @@ class NextVideoQueue extends React.Component {
 
     render() {
         return (
-            <section className="sub-section">
-                <p className="sub-section__heading">NEXT VIDEO</p>
-                {this.state.videoList.map(videoInfo => 
-                    <NextVideo key={videoInfo.id} id={videoInfo.id} image={videoInfo.image} title={videoInfo.title} channel={videoInfo.channel} updateHero={this.props.updateHero}/>)}
-            </section>
+                <section className="sub-section">
+                    <p className="sub-section__heading">NEXT VIDEO</p>
+                    {this.state.videoList.map(videoInfo => 
+                        <NextVideo key={videoInfo.id} id={videoInfo.id} image={videoInfo.image} title={videoInfo.title} channel={videoInfo.channel} updateHero={this.props.updateHero}/>)}
+                </section>
         );
     };
 };

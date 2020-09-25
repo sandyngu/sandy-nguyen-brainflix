@@ -11,7 +11,7 @@ function HeroVideoControls(props) {
             <img src={Play} className="main__hero-video-button main__hero-video-icon main__hero-video-controls-play" alt="Play Icon"/>
             <div className="main__hero-video-button main__hero-video-scrubber-container">
                 <img src={Line} className="main__hero-video-icon main__hero-video-controls-scrubber" alt="Scrubber"/>
-                <p className="main__hero-video-time"> 0:00 / {props.duration}</p>
+                <p className="main__hero-video-time"> 0:00 / </p>
             </div>
             <div className="main__hero-video-button main__hero-video-fullscreen-volume-container">
                 <img src={Fullscreen} className="main__hero-video-icon main__hero-video-controls-fullscreen" alt="Fullscreen Icon"/>

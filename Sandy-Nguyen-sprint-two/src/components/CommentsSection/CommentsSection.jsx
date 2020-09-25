@@ -6,7 +6,7 @@ function CommentsSection(props) {
 
         return (
             <section className="sub-section">
-                <CommentsForm heroVideo={props.comments}/>
+                <CommentsForm heroVideoComments={props.heroVideoComments}/>
                 {props.heroVideoComments.map(commentsInfo => 
                     <CommentsBox key={commentsInfo.id} name={commentsInfo.name} date={commentsInfo.timestamp} text={commentsInfo.comment}/>)}
             </section>

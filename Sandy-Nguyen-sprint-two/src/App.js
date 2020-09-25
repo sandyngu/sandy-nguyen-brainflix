@@ -23,7 +23,7 @@ class App extends React.Component {
       console.log(res.data, res.data.comments)
       this.setState({
         heroVideoDetails: [res.data],
-        commentsList: res.data.comments     
+        commentsList: res.data.comments
       })
     })
     .catch(err => console.log(err));
@@ -45,26 +45,26 @@ class App extends React.Component {
   render() {
     return (
       <Switch>
-        <Route path='/' exact>
-        <div className="App">   
-            <section className="header">
-                <Header />
-            </section>   
-            <section className="hero">
-                <HeroVideo heroVideoDetails={this.state.heroVideoDetails}/>
-            </section>
-            <div className="section-container">
-                <section className="main-section">
-                    <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails}/>
-                    <CommentsSection heroVideoComments={this.state.commentsList}/>
-                </section>
-                <section className="side-section">
-                  <NextVideoQueue updateHero={this.updateHero}/>
-                </section>
-            </div>
-        </div>
-        </Route>
-        <Route path='/upload' component={Upload}/>
+          <Route path='/' exact>
+          <div className="App">   
+              <section className="header">
+                  <Header />
+              </section>   
+              <section className="hero">
+                  <HeroVideo heroVideoDetails={this.state.heroVideoDetails}/>
+              </section>
+              <div className="section-container">
+                  <section className="main-section">
+                      <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails}/>
+                      <CommentsSection heroVideoComments={this.state.commentsList}/>
+                  </section>
+                  <section className="side-section">
+                    <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} updateHero={this.updateHero}/>
+                  </section>
+              </div>
+          </div>
+          </Route>
+          <Route path='/upload' component={Upload}/>
       </Switch>
     );
   }
