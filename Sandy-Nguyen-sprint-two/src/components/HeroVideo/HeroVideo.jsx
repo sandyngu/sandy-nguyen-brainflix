@@ -9,7 +9,7 @@ function HeroVideo(props) {
             {props.heroVideoDetails[0] && 
                 <>
                 <video poster={props.heroVideoDetails[0].image} src="../../assets/video/BrainStation Sample Video.mp4" type="video/mp4" className="main__hero-video"/>
-                <HeroVideoControls /> 
+                <HeroVideoControls heroVideoDetails={props.heroVideoDetails}/> 
                 </>}
             </div>          
             )
