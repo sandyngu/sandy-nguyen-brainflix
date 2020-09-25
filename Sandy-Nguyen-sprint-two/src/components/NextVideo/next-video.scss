@@ -26,6 +26,10 @@
             margin: 5% 0;
         }
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &-image {
             width: 120px;
             height: 72px;

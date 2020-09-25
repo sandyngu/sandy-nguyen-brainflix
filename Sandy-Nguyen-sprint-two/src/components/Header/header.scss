@@ -118,8 +118,7 @@ input:focus {
             border-radius: 4px;
             width: 100%;
             max-width: 408px;
-            height: 50px;
-            max-height: 17px;
+            height: 13.5px;
             margin: 2% auto 3% auto;
 
             &:focus {
@@ -135,22 +134,23 @@ input:focus {
             }
         }
     }
+
+    &__upload {
+        width: 80%;
+        text-decoration: none;
+
+        @include tablet {
+            width: 61%;
+        }
+    }
     &__upload-button {
         display: flex;
         justify-content: center;
         align-items: center;
         letter-spacing: 0.5px;
-        height: 48px;
-        width: 78%;
+        height: 50px;
+        width: 100%;
         max-width: 410px;
-
-        @include tablet {
-            width: 63%;
-            height: 53px;
-        }
-        @include desktop {
-            width: 62%;
-        }
         
         &-icon {
             width: 18px;
@@ -165,10 +165,6 @@ input:focus {
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        margin-left: 4.5%;
-
-        @include tablet {
-            margin-left: 5%;
-        }
+        margin-left: 5%;
     }
 }

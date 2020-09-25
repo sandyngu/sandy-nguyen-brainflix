@@ -44,26 +44,28 @@ class App extends React.Component {
 
   render() {
     return (
-        <Switch>
-          <Route path='/' exact>
-            <div className="App">   
-                <section className="header">
-                    <Header />
-                </section>   
+      <Switch>
+        <Route path='/' exact>
+        <div className="App">   
+            <section className="header">
+                <Header />
+            </section>   
+            <section className="hero">
                 <HeroVideo heroVideoDetails={this.state.heroVideoDetails}/>
-                <div className="section-container">
-                    <section className="main-section">
-                      <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails}/>
-                      <CommentsSection heroVideoComments={this.state.commentsList}/>
-                    </section>
-                    <section className="side-section">
-                      <NextVideoQueue updateHero={this.updateHero}/>
-                    </section>
-                </div>
+            </section>
+            <div className="section-container">
+                <section className="main-section">
+                    <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails}/>
+                    <CommentsSection heroVideoComments={this.state.commentsList}/>
+                </section>
+                <section className="side-section">
+                  <NextVideoQueue updateHero={this.updateHero}/>
+                </section>
             </div>
-          </Route>
-          <Route path='/upload' component={Upload}/>
-        </Switch>
+        </div>
+        </Route>
+        <Route path='/upload' component={Upload}/>
+      </Switch>
     );
   }
 }
