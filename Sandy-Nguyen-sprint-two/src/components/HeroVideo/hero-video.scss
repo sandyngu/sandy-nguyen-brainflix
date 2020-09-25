@@ -11,13 +11,17 @@
     }
     
     &-video {
-        width: 100vw;  
+        width: 100%;  
+        height: 56vw;
+        object-fit: cover;
 
         @include tablet {
-            width: 91vw;
+            width: 91%;
+            height: 51vw;
         }
         @include desktop {
-            width: 72vw;
+            width: 72%;
+            height: 40vw;
         }
     }   
 }
