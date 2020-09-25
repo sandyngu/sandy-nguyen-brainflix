@@ -4,13 +4,12 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import HeroVideo from './components/HeroVideo/HeroVideo';
 import HeroVideoDetails from './components/HeroVideoDetails/HeroVideoDetails';
-import NextVideoQueue from './components/NextVideo/NextVideo';
+import NextVideoQueue from './components/NextVideoQueue/NextVideoQueue';
 import CommentsSection from './components/CommentsSection/CommentsSection';
 import Upload from './components/Upload/Upload';
 import './App.css';
 
 const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
-let videosURL = `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=${API_KEY}`
 
 class App extends React.Component {
   state = {
@@ -19,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(videosURL)
+    axios.get(`https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=${API_KEY}`)
     .then(res => {
       console.log(res.data, res.data.comments)
       this.setState({
@@ -30,6 +29,19 @@ class App extends React.Component {
     .catch(err => console.log(err));
 }
 
+  updateHero = (id) => {
+    axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${API_KEY}`)
+    .then(res => {
+      console.log(res.data, res.data.comments)
+
+      this.setState({
+        heroVideoDetails: [res.data],
+        commentsList: res.data.comments     
+      })
+    })
+    .catch(err => console.log(err));
+  }
+
   render() {
     return (
         <Switch>
@@ -38,14 +50,14 @@ class App extends React.Component {
                 <section className="header">
                     <Header />
                 </section>   
-                <HeroVideo heroVideo={this.state.heroVideoDetails}/>
+                <HeroVideo heroVideoDetails={this.state.heroVideoDetails}/>
                 <div className="section-container">
                     <section className="main-section">
-                      <HeroVideoDetails heroVideo={this.state.heroVideoDetails}/>
-                      <CommentsSection heroVideo={this.state.commentsList}/>
+                      <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails}/>
+                      <CommentsSection heroVideoComments={this.state.commentsList}/>
                     </section>
                     <section className="side-section">
-                      <NextVideoQueue />
+                      <NextVideoQueue updateHero={this.updateHero}/>
                     </section>
                 </div>
             </div>
