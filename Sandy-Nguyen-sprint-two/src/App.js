@@ -6,8 +6,8 @@ import HeroVideo from './components/HeroVideo/HeroVideo';
 import HeroVideoDetails from './components/HeroVideoDetails/HeroVideoDetails';
 import NextVideoQueue from './components/NextVideoQueue/NextVideoQueue';
 import CommentsSection from './components/CommentsSection/CommentsSection';
-import NextVideo from './components/NextVideo/NextVideo'
 import Upload from './components/Upload/Upload';
+import UpdatedPage from './components/UpdatedPage/UpdatedPage'
 import './App.css';
 
 const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
@@ -40,14 +40,14 @@ class App extends React.Component {
   axios
     .all([requestOne, requestTwo])
     .then(
-      axios.spread((...responses) => {
-        const responseOne = responses[0];
-        const responseTwo = responses[1];
+      axios.spread((...res) => {
+        const responseOne = res[0];
+        const responseTwo = res[1];
 
         this.setState({
-            heroVideoDetails: [responses[0].data],
-            commentsList: responses[0].data.comments,
-            nextVideoList: responses[1].data
+            heroVideoDetails: [res[0].data],
+            commentsList: res[0].data.comments,
+            nextVideoList: res[1].data
         });
         console.log(responseOne, responseTwo);  
       })
@@ -57,20 +57,26 @@ class App extends React.Component {
     });
   }
 
-  // updateHero = (id) => {
-  //   axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${API_KEY}`)
-  //   .then(res => {
-  //     console.log(res.data, res.data.comments)
+  updateHero = (id) => {
+    axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${API_KEY}`)
+    .then(res => {
+      console.log(res.data, res.data.comments)
 
-  //     this.setState({
-  //       heroVideoDetails: [res.data],
-  //       commentsList: res.data.comments     
-  //     });
-  //   })
-  //   .catch(err => console.log(err));
+      this.setState({
+        heroVideoDetails: [res.data],
+        commentsList: res.data.comments,  
+      })
+    })
+    .catch(err => console.log(err));
+  }
+
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.match.params.id !== this.props.match.params.id) {
+  //     console.log("prevProps", prevProps);
+  //     console.log("props", this.props);
+  //     this.updateHero(this.props.match.params.id);
+  //   }
   // }
-
-
 
   render() {
     return (
@@ -88,7 +94,7 @@ class App extends React.Component {
               </div>
           </div>
           </Route>
-          <Route path='/video/:id' render={(routerProps) => <NextVideo {...routerProps}/> } />
+          <Route path='/video/:id' render={() => <UpdatedPage state={this.state}/>}/>
           <Route path='/upload' component={Upload}/>
       </Switch>
     );
@@ -96,6 +102,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-
