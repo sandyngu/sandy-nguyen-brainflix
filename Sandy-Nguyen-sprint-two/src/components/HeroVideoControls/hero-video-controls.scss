@@ -50,6 +50,7 @@
         &-scrubber {
             width: 100%;
             vertical-align: center;
+            opacity: 0.7;
             
             @include tablet {
                 width: 85%;

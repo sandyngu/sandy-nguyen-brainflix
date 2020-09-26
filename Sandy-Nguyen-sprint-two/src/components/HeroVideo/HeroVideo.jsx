@@ -4,7 +4,8 @@ import './hero-video.scss'
 
 function HeroVideo(props) {
 
-    return (       
+    return ( 
+        <section className="hero">
             <div className="main__hero-video-container">
             {props.heroVideoDetails[0] && 
                 <>
@@ -12,7 +13,8 @@ function HeroVideo(props) {
                 <HeroVideoControls heroVideoDetails={props.heroVideoDetails}/> 
                 </>}
             </div>          
-            )
+        </section>      
+    )
 }
 
 export default HeroVideo;
