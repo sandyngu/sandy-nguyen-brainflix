@@ -4,7 +4,7 @@ import './comments-form.scss';
 function CommentsForm(props) {
         return (     
             <>
-                <h2 className="comments-section__heading">{props.heroVideoComments.length} Comments</h2>
+                <h2 className="comments-section__heading">{props.commentsList.length} Comments</h2>
                 <div className="comments-section__container">
                         <div className="comments-section__photo"></div>
                         <form className="comments-section__form">
