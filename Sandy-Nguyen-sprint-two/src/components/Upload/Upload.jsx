@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "../Header/Header";
 import UploadImage from "../../assets/images/Upload-video-preview.jpg";
 import "./upload.scss";
 
 function Upload() {
     return (
         <>
-            <Header />
             <div className="divider upload-section__divider--thin"></div>
             <div className="upload-section">
                 <h1 className="upload-section__heading">Upload Video</h1>

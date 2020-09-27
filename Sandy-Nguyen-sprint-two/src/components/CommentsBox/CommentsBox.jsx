@@ -3,8 +3,8 @@ import './comments-box.scss';
 
 function CommentsBox(props) {
     const { name, date, text } = props;
-    let time = new Date(date);
-    let formattedDate = time.toLocaleDateString();
+    const time = new Date(date);
+    const formattedDate = time.toLocaleDateString();
 
     return ( 
         <div className="comments-section__guestbook">

@@ -6,18 +6,18 @@
     &__heading {
         font-weight: 500;
         color: $small-title-color;
-        margin: 13% 0 0 0;
+        margin: 13% 0 10% 0;
 
         @include tablet {
-            margin: 5.5% 0 0 0;
+            margin: 5.5% 0 4.5% 0;
         }
         @include desktop {
-            margin: 14% 0 7% 0;
+            margin: 14% 0 11.5% 0;
         }
     }
     &__next-video {
         display: flex;
-        margin: 7% 0 6% 0;
+        margin: 7.5% 0;
 
         @include tablet {
             margin: 2% 0 3.5% 0;
@@ -55,14 +55,15 @@
             margin: 0;
             font-weight: 500;
             // white-space: nowrap;
-            max-height: 2.4em;
-            max-lines: 2;
+            max-height: 2.5em;
+            line-height: 19px;
             overflow: hidden;
             text-overflow: ellipsis;
             width: 150px;
 
             @include tablet {
-                font-size: $h2-desktab-fontsize;
+                font-size: $h3-desktab-fontsize;
+                letter-spacing: 0.4px;
                 overflow: visible;
                 white-space: normal;
                 width: 200px;
@@ -70,17 +71,18 @@
             }
             @include desktop {
                 font-size: $h3-desktab-fontsize;
+                font-weight: 500;
                 line-height: 21px;
-                width: 180px;
+                width: 190px;
             }
 
         }
         &-author {
             font-weight: normal;
-            margin: 5% 0 0 0;
+            margin: 8% 0 0 0;
 
             @include tablet {
-                margin: 6.5% 0 0 0;
+                margin: 7.5% 0 0 0;
             }
             @include desktop {
                 font-size: $h4-desktab-fontsize;

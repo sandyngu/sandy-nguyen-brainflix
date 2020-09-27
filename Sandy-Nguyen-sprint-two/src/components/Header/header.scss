@@ -34,21 +34,20 @@ input:focus {
 }
 
 .header {
+ 
+    padding-bottom: 5%;
+    margin: 0 5%;
 
-    &__parent {
-        padding-bottom: 5%;
-        margin: 0 5%;
-
-        @include tablet {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 0;
-            margin: 0 3%;
-        }
-        @include desktop {
-            margin: 0 9%;
-        }
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        margin: 0 3%;
     }
+    @include desktop {
+        margin: 0 9%;
+    }
+    
     &__logo-container {
         display: flex;
         justify-content: center;

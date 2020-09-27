@@ -21,7 +21,8 @@
             @include desktop {
                 font-size: $h1-desktab-fontsize;
                 letter-spacing: 0.5px;
-                margin: 5% 10% 1.5% 0;
+                margin: 5% 10% 2% 0;
+                line-height: 45px;
             }
         }
         &-container {
@@ -113,6 +114,7 @@
             }
             @include desktop {
                 font-size: $h4-desktab-fontsize;
+                margin: 5% 0;
                 width: 74%;
                 letter-spacing: 0;
                 line-height: 22px;
