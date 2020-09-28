@@ -1,0 +1,27 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+.main__hero {
+
+    &-video-container {
+        background-color: black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+    &-video {
+        width: 100%;  
+        height: 56vw;
+        object-fit: cover;
+
+        @include tablet {
+            width: 91%;
+            height: 51vw;
+        }
+        @include desktop {
+            width: 72%;
+            height: 40vw;
+        }
+    }   
+}

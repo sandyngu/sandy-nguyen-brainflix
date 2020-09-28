@@ -1,0 +1,129 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+input {
+    font-family:'Avenir';
+    font-size: $h3-mobile-fontsize;
+
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h3-desktab-fontsize;
+    }
+}
+
+textarea:focus {
+    border: $button-color 2px solid;
+    outline: none;
+}
+
+.comments-section {
+
+    &__heading {
+        font-weight: 500;
+        margin: 32px 0 24px 0;
+
+        @include tablet {
+            margin: 60px 0 27px 0;
+        }
+        @include desktop {
+            font-size: $h3-desktab-fontsize;
+            margin: 55px 0 23px 0;
+        }
+    }
+    &__photo {
+        background-image: url('../../assets/images/Mohan-muruge.jpg');
+        background-size: cover;
+        background-position: 15%;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin: 22px 4.5% 0 0;
+
+        @include tablet {
+            margin: 22px 2.5% 0 0;
+        }
+        @include desktop {
+            margin: 23px 3% 0 0;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @include tablet {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            margin: 3px 0;
+        }
+    }
+    &__form {
+        width: 78%;
+
+        @include tablet {
+            width: 87%;
+            height: 95px;
+        }
+        @include desktop {
+            width: 86%;
+            height: 93px;
+        }
+
+        &-title {
+            letter-spacing: 0.3px;
+        }
+        &-input {
+            font-family: 'Avenir';
+            background-color: $secondary-background-color;
+            border: 2px solid $circle-divider-color;
+            outline: none;
+            border-radius: 4px;
+            margin: 3px 0 10px 0;
+            resize: none;
+            width: stretch;
+            height: 10vh;
+            padding: 15px 15px;
+            min-height: 65px;
+            max-height: 75px;
+
+            @include tablet {
+                width: 65%;
+                padding: 14px;
+                height: 18px;
+                min-height: 18px;
+                margin: 4px 0 4px 0;
+            }  
+            @include desktop {
+                width: 63.5%;
+            }
+        }
+        &-title {
+            color: $small-title-color;
+            font-size: $p-mobile-fontsize;
+            font-weight: 500;
+        }
+    }
+    &__button {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        float: right;
+        color: white;
+        font-size: $h3-mobile-fontsize;
+        width: 100%;
+        margin: 0 0 25px 0;
+        height: 50px;
+               
+        @include tablet {
+            font-size: $h3-desktab-fontsize;
+            width: 27%;
+            margin: 4px 0;
+            height: 50px;
+        }
+        @include desktop {
+            font-size: $h3-desktab-fontsize;
+            width: 28%;
+        }
+    }
+}

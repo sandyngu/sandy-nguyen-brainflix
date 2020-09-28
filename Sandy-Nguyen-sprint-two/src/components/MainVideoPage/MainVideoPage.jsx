@@ -1,11 +1,14 @@
 import React from 'react';
 import axios from 'axios';
+import Header from '../Header/Header';
 import HeroVideo from '../HeroVideo/HeroVideo';
 import HeroVideoDetails from '../HeroVideoDetails/HeroVideoDetails';
 import CommentsSection from '../CommentsSection/CommentsSection';
 import NextVideoQueue from '../NextVideoQueue/NextVideoQueue';
 
 const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
+// const searchUrl = search =>
+// `https://project-2-api.herokuapp.com/videos/search?api_key=${API_KEY}&q=${search}`;
 
 class MainVideoPage extends React.Component {
 
@@ -47,6 +50,43 @@ class MainVideoPage extends React.Component {
       })
       .catch(err => console.log(err));
     };
+
+    newComment = (id) => {
+      axios.post(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${API_KEY}`)
+      .then(res => {  
+        this.setState({
+          heroVideoDetails: [res.data],
+          commentsList: res.data.comments, 
+        });
+      })
+      .catch(err => console.log(err));
+    };
+
+    handleSubmit = (event, id) => {
+      event.preventDefault();
+      this.newComment(id);
+      event.target.reset();
+      axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${API_KEY}`)
+      .then(res => {  
+        this.setState({
+          heroVideoDetails: [res.data],
+          commentsList: res.data.comments,
+      })
+    })
+    };
+
+    // searchVideos = event => {
+    //   event.preventDefault();
+    //   const searchWords = event.target.search.value;
+    //   event.target.search.value = searchWords; 
+    //   axios.get(searchUrl(searchWords))
+    //       .then(res => {
+    //         this.setState({
+    //           gifs: res.data.data
+    //         })
+    //       })
+    //       .catch(err => console.log(err))
+    // };
   
     componentDidUpdate(prevProps) {
       if (prevProps.match.params.id !== this.props.match.params.id) {
@@ -57,11 +97,12 @@ class MainVideoPage extends React.Component {
     render() {
         return (
           <>
+            <Header /*searchVideos={this.searchVideos}*//>
             <HeroVideo heroVideoDetails={this.state.heroVideoDetails} />
             <div className="section-container">
                 <section className="main-section">
                     <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails} />
-                    <CommentsSection commentsList={this.state.commentsList} />
+                    <CommentsSection commentsList={this.state.commentsList} /*newComment={this.handleSubmit}*//>
                 </section>
                   <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} />
             </div>

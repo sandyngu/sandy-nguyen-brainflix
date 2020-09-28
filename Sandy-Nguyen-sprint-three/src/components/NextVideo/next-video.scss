@@ -1,0 +1,90 @@
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+.side-section {
+
+    &__heading {
+        font-weight: 500;
+        color: $small-title-color;
+        margin: 37px 0 35px 0;
+
+        @include tablet {
+            margin: 40px 0 37px 0;
+        }
+    }
+    &__next-video {
+        display: flex;
+        margin: 20px 0;
+
+        @include tablet {
+            margin: 24px 0;
+        }
+        @include desktop {
+            margin: 22px 0;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: black;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &-image {
+            width: 120px;
+            height: 72px;
+            border-radius: 5px;
+            object-fit: cover;  
+
+            &:hover {
+                filter: brightness(90%);
+            }
+        }
+        &-content {
+            margin: 6px 15px;
+
+            @include tablet {
+                margin: 0 20px;
+            }
+            @include desktop {
+                margin: 1.5px 5%;
+            }
+        }
+        &-title {
+            margin: 0;
+            font-weight: 500;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 150px;
+
+            @include tablet {
+                font-size: $h3-desktab-fontsize;
+                letter-spacing: 0.4px;
+                overflow: visible;
+                white-space: normal;
+                width: 200px;
+                line-height: 23px;
+            }
+            @include desktop {
+                font-size: $h3-desktab-fontsize;
+                font-weight: 500;
+                line-height: 21px;
+                width: 190px;
+            }
+        }
+        &-author {
+            font-weight: normal;
+            margin: 12px 0 0 0;
+
+            @include tablet {
+                margin: 8px 0 0 0;
+            }
+            @include desktop {
+                font-size: $h4-desktab-fontsize;
+            }
+        }
+    }
+}
