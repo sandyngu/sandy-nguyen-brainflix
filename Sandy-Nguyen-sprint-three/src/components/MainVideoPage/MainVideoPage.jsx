@@ -50,19 +50,6 @@ class MainVideoPage extends React.Component {
       })
       .catch(err => console.log(err));
     };
-
-    // searchVideos = event => {
-    //   event.preventDefault();
-    //   const searchWords = event.target.search.value;
-    //   event.target.search.value = searchWords; 
-    //   axios.get(searchUrl(searchWords))
-    //       .then(res => {
-    //         this.setState({
-    //           gifs: res.data.data
-    //         })
-    //       })
-    //       .catch(err => console.log(err))
-    // };
   
     componentDidUpdate(prevProps) {
       if (prevProps.match.params.id !== this.props.match.params.id) {
@@ -73,7 +60,7 @@ class MainVideoPage extends React.Component {
     render() {
         return (
           <>
-            <Header /*searchVideos={this.searchVideos}*//>
+            <Header />
             <HeroVideo heroVideoDetails={this.state.heroVideoDetails} />
             <div className="section-container">
                 <section className="main-section">

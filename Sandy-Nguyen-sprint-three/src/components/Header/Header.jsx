@@ -4,7 +4,7 @@ import Logo from '../../assets/logo/Logo-brainflix.svg';
 import UploadIcon from '../../assets/icons/SVG/Icon-upload.svg';
 import './header.scss'
 
-function Header(/*props*/) {
+function Header() {
     return (
         <header className="header">
             <div className="header__logo-container">
@@ -13,7 +13,7 @@ function Header(/*props*/) {
                 </Link>
             </div>
             <div className="header__container">
-                <form className="header__search-bar" /*onSubmit={() => props.searchVideos()}*/>
+                <form className="header__search-bar">
                     <input type="text" name="search" className="header__search-bar-input" placeholder="Search"/>
                 </form>
                 <div className="header__upload-photo-container">
