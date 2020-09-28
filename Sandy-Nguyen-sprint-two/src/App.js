@@ -5,20 +5,17 @@ import MainVideoPage from './components/MainVideoPage/MainVideoPage';
 import Upload from './components/Upload/Upload';
 import './App.css';
 
-class App extends React.Component {
-
-  render() {
+function App() {
     return (
       <div className="App">       
       <Header />
       <Switch>
           <Route path='/' exact component={MainVideoPage} />
           <Route path='/video/:id' component={MainVideoPage} />
-          <Route path='/upload' component={Upload}/>
+          <Route path='/upload' component={Upload} />
       </Switch>
       </div>
     );
-  }
 }
 
 export default App;

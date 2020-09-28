@@ -27,11 +27,9 @@
             text-decoration: none;
             color: black;
         }
-
         &:hover {
             cursor: pointer;
         }
-
         &-image {
             width: 120px;
             height: 72px;
@@ -76,7 +74,6 @@
                 line-height: 21px;
                 width: 190px;
             }
-
         }
         &-author {
             font-weight: normal;

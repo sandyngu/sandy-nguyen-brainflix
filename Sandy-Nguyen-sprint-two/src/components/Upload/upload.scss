@@ -116,9 +116,8 @@ input, textarea {
                     margin-bottom: 33px;
                 }
                 @include desktop {
-                    height: 9.5vh;
+                    height: 7.5vh;
                     margin: 0;
-
                 }
             }
         }
@@ -132,10 +131,6 @@ input, textarea {
         }
         @include desktop {
             margin-bottom: 20px;
-        }
-
-        &-top {
-            border-width: 3px;
         }
     }
     &__form-options {

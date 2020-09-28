@@ -24,7 +24,7 @@ function HeroVideoText(props) {
                 <div className="divider main__video-details-divider"></div>
                 <p className="main__video-details-description">{description}</p>
         </div>
-    )
+    );
 };
 
 export default HeroVideoText;

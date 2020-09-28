@@ -11,7 +11,6 @@ input {
     @include desktop {
         font-size: $h3-desktab-fontsize;
     }
-
 }
 
 textarea:focus {
@@ -33,7 +32,6 @@ textarea:focus {
             margin: 55px 0 23px 0;
         }
     }
-
     &__photo {
         background-image: url('../../assets/images/Mohan-muruge.jpg');
         background-size: cover;
@@ -50,7 +48,6 @@ textarea:focus {
             margin: 23px 3% 0 0;
         }
     }
-
     &__container {
         display: flex;
         flex-wrap: wrap;
@@ -77,7 +74,6 @@ textarea:focus {
         &-title {
             letter-spacing: 0.3px;
         }
-        
         &-input {
             font-family: 'Avenir';
             background-color: $secondary-background-color;
@@ -103,7 +99,6 @@ textarea:focus {
                 width: 63.5%;
             }
         }
-        
         &-title {
             color: $small-title-color;
             font-size: $p-mobile-fontsize;

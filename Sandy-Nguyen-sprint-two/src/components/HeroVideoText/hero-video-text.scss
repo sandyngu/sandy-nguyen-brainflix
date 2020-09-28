@@ -60,7 +60,6 @@
                 font-size: $h4-desktab-fontsize;
                 margin: 1px 0;
             }
-
         }
         &-views-likes {
             display: flex;
@@ -70,7 +69,6 @@
                 margin: 0;
                 width: 31%;
             }
-
             @include desktop {
                 margin: 0;
                 width: 32%;
@@ -139,5 +137,4 @@
             vertical-align: bottom;
         }
     }
-    
 }

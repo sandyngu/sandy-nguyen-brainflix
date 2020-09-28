@@ -8,7 +8,7 @@ function Upload() {
             <div className="divider upload-section__divider--thin"></div>
             <div className="upload-section">
                 <h1 className="upload-section__heading">Upload Video</h1>
-                <div className="divider upload-section__divider upload-section__divider--hidden upload-section__divider--hidden-top"></div>
+                <div className="divider upload-section__divider upload-section__divider--hidden"></div>
                 <div className="upload-section__container">
                     <div className="upload-section__video-form-container">
                         <div className="upload-section__video">
@@ -25,11 +25,11 @@ function Upload() {
                         </div>
                     </div>
                 </div>
-                            <div className="divider upload-section__divider upload-section__form-divider upload-section__divider--hidden upload-section__divider--hidden-bottom"></div>
-                            <div className=" upload-section__form-options">
-                                <button className="upload-section__form-options-publish">PUBLISH</button>
-                                <h3 className="upload-section__form-options-cancel">CANCEL</h3>
-                            </div>
+                <div className="divider upload-section__divider upload-section__form-divider upload-section__divider--hidden"></div>
+                <div className=" upload-section__form-options">
+                    <button className="upload-section__form-options-publish">PUBLISH</button>
+                    <h3 className="upload-section__form-options-cancel">CANCEL</h3>
+                </div>
             </div>
         </>
     )

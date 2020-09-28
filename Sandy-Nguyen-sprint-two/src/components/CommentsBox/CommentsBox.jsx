@@ -18,7 +18,7 @@ function CommentsBox(props) {
             </div>
             <div className="divider comments-section__guestbook-divider"></div>
         </div>
-    )
-}
+    );
+};
 
 export default CommentsBox;

@@ -8,7 +8,8 @@ function HeroVideoDetails(props) {
                 <>
                     {props.heroVideoDetails.map(videoDetails => 
                     <HeroVideoText key={videoDetails.id} title={videoDetails.title} channel={videoDetails.channel} date={videoDetails.timestamp} views={videoDetails.views} likes={videoDetails.likes} description={videoDetails.description} />)}          
-                </>}
+                </>
+                }
             </div>    
         );
 };

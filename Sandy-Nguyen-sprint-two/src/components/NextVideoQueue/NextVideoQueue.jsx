@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NextVideo from '../NextVideo/NextVideo';
 
-// const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
-
 class NextVideoQueue extends React.Component {
 
     render() {
