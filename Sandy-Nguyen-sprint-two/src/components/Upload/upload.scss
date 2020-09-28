@@ -29,14 +29,14 @@ input, textarea {
 
     }
     &__heading { 
-        margin: 12% auto;
+        margin: 32px auto;
 
         @include tablet {
             font-size: $hero-desktab-fontsize;
-            margin: 7% 0 4% 0;
+            margin: 50px 0 30px 0;
         }
         @include desktop {
-            margin: 5% 0 2.5% 0;
+            margin: 45px 0 27px 0;
         }
     }
     &__video {
@@ -52,17 +52,17 @@ input, textarea {
             margin: 0;
             
             @include tablet {
-                margin-top: 6%;
+                margin-top: 20px;
             }
         }
         &-thumbnail {
             width: 100%;
-            max-width: 500px;
+            max-width: 400px;
             border-radius: 5px;
-            margin: 2% 0 7% 0;
+            margin: 5px 0 25px 0;
 
             @include tablet {
-                margin: 1% 0 4% 0;
+                margin: 3px 0 30px 0;
                 width: 50%;
                 max-width: 700px;
             }
@@ -76,7 +76,7 @@ input, textarea {
 
         @include desktop {
             display: flex;
-            margin-bottom: 2%;
+            margin-bottom: 5px;
         }
     }
     &__form-container {
@@ -85,7 +85,7 @@ input, textarea {
     &__form {
 
         @include desktop {
-            margin: 3.1% 0 0.5% 3% ;
+            margin: 18px 0 0 22px ;
         }
 
         &-title {
@@ -100,23 +100,23 @@ input, textarea {
             border: 2px solid $circle-divider-color;
             outline: none;
             border-radius: 4px;
-            margin: 1% 0 7% 0;
+            margin: 2px 0 25px 0;
             resize: none;
             width: stretch;
             padding: 15px 15px;
 
             @include tablet {
-                margin: 0.3% 0 3% 0;
+                margin: 2px 0 22px 0;
             }
 
             &-description {
                 height: 18vh;
 
                 @include tablet {
-                    margin-bottom: 4.5%;
+                    margin-bottom: 33px;
                 }
                 @include desktop {
-                    height: 5.2vw;
+                    height: 9.5vh;
                     margin: 0;
 
                 }
@@ -128,10 +128,14 @@ input, textarea {
 
         @include tablet {
             display: block;
-            margin-bottom: 5%;
+            margin-bottom: 40px;
         }
         @include desktop {
-            margin-bottom: 2%;
+            margin-bottom: 20px;
+        }
+
+        &-top {
+            border-width: 3px;
         }
     }
     &__form-options {
@@ -140,10 +144,10 @@ input, textarea {
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
-            padding-bottom: 20%;            
+            padding-bottom: 160px;            
         }
         @include desktop {
-            margin-top: 4%;
+            margin-top: 37px;
         }
 
         &-publish {
@@ -161,13 +165,10 @@ input, textarea {
             font-weight: 600;
             color: $button-color;
             text-align: center;
-            margin: 9% auto;
+            margin: 27px auto;
 
             @include tablet {
-                margin: 0 7%;
-            }
-            @include desktop {
-                margin: 0 5%;
+                margin: 0 45px;
             }
         }
     }

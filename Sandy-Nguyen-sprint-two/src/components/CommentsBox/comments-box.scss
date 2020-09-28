@@ -15,12 +15,12 @@
     &-entry {
         display: flex;
         flex-wrap: wrap;
-        margin: 2% 0;
+        margin: 6px 0;
         justify-content: space-between;
 
         @include tablet {
             justify-content: flex-start;
-            margin: 1.5% 0 0 0;
+            margin: 12px 0 0 0;
             width: 90%;
         }
         @include desktop {
@@ -33,32 +33,31 @@
         height: 40px;
         border-radius: 50%;
         min-width: 40px;
-        margin: 5% 5% 5% 0;
+        margin: 15px 15px 15px 0;
 
         @include tablet {
-            height: 45px;
-            min-width: 45px;
-            margin: 1% 2% 0 0;
-        }
-        @include desktop {
-            height: 40px;
-            min-width: 40px;
-        }
-        
+            height: 42px;
+            min-width: 42px;
+            margin: 10px 13px 0 0;
+        }      
     }
     &-container {
-        margin: 2% auto;
+        margin: 6px auto;
         display: flex;
+
+        @include tablet {
+            margin: 12px auto;
+        }
     }
     &-name {
         display: inline-flex;
         font-weight: 500;
-        margin: 6% 0 0 0;
+        margin: 13px 0 0 0;
         font-size: $h3-mobile-fontsize;
 
         @include tablet {
             font-size: $h2-desktab-fontsize;
-            margin: 0 2% 0 0;
+            margin: 0 10px 0 0;
         }
         @include desktop {
             font-size: $h3-desktab-fontsize;
@@ -67,25 +66,26 @@
     }
     &-date {
         display: inline-flex;
-        margin: 6% 0 0 0;
+        margin: 13px 0 0 0;
         color: $small-title-color;
 
         @include tablet {
-            font-size: $h3-desktab-fontsize;
-            margin: 0.2% 0 0 0;
+            font-size: $h4-desktab-fontsize;
+            margin: 3px 0 0 0;
         }
         @include desktop {
             font-size: $h4-desktab-fontsize;
+            margin: 1px 0 0 0;
         }
     }
     &-text {
-        margin: 4% 0;
+        margin: 10px 0 7px 0;
         display: inline-flex;
         width: 99.5%;
         line-height: 20px;
 
         @include tablet {
-            margin: 1% 0;
+            margin: 7px 0;
         }
         @include desktop {
             width: 96%;

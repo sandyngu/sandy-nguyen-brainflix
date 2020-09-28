@@ -2,7 +2,6 @@ import React from 'react';
 import HeroVideoText from '../HeroVideoText/HeroVideoText'
 
 function HeroVideoDetails(props) {
-    console.log(props)
         return (    
             <div className="main__video-details">
                 {props.heroVideoDetails && 

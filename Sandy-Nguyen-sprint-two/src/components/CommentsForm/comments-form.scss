@@ -20,18 +20,17 @@ textarea:focus {
 }
 
 .comments-section {
-    padding-bottom: 11%;
 
     &__heading {
         font-weight: 500;
-        margin: 11% 0 8% 0;
+        margin: 32px 0 24px 0;
 
         @include tablet {
-            margin: 8% 0 3% 0;
+            margin: 60px 0 27px 0;
         }
         @include desktop {
             font-size: $h3-desktab-fontsize;
-            margin: 8.5% 0 4% 0;
+            margin: 55px 0 23px 0;
         }
     }
 
@@ -45,7 +44,7 @@ textarea:focus {
         margin: 22px 4.5% 0 0;
 
         @include tablet {
-            margin: 23px 2.5% 0 0;
+            margin: 22px 2.5% 0 0;
         }
         @include desktop {
             margin: 23px 3% 0 0;
@@ -60,7 +59,7 @@ textarea:focus {
         @include tablet {
             flex-wrap: nowrap;
             justify-content: flex-start;
-            margin: 0.5% 0;
+            margin: 3px 0;
         }
     }
     &__form {
@@ -82,12 +81,12 @@ textarea:focus {
         &-input {
             font-family: 'Avenir';
             background-color: $secondary-background-color;
-            border: 2.5px solid $circle-divider-color;
+            border: 2px solid $circle-divider-color;
             outline: none;
             border-radius: 4px;
-            margin: 1% 0 5% 0;
+            margin: 3px 0 10px 0;
             resize: none;
-            width: 85%;
+            width: stretch;
             height: 10vh;
             padding: 15px 15px;
             min-height: 65px;
@@ -98,19 +97,15 @@ textarea:focus {
                 padding: 14px;
                 height: 18px;
                 min-height: 18px;
-                margin: 0.5% 0 5% 0;
+                margin: 4px 0 4px 0;
             }  
             @include desktop {
                 width: 63.5%;
-                padding: 14px;
-                height: 18px;
-                min-height: 18px;
             }
         }
         
         &-title {
             color: $small-title-color;
-            margin: 1% 0;
             font-size: $p-mobile-fontsize;
             font-weight: 500;
         }
@@ -122,13 +117,13 @@ textarea:focus {
         color: white;
         font-size: $h3-mobile-fontsize;
         width: 100%;
-        margin: 0 0 11% 0;
+        margin: 0 0 25px 0;
         height: 50px;
                
         @include tablet {
             font-size: $h3-desktab-fontsize;
             width: 27%;
-            margin: 0.5% 0;
+            margin: 4px 0;
             height: 50px;
         }
         @include desktop {

@@ -24,17 +24,17 @@ class MainVideoPage extends React.Component {
   
       axios.all([requestOne, requestTwo])
           .then(
-          axios.spread((...res) => {             
-            this.setState({
-              heroVideoDetails: [res[0].data],
-              commentsList: res[0].data.comments,
-              nextVideoList: res[1].data
-            });
-          })
-        )
-        .catch(err => {
-          console.error(err);
+      axios.spread((...res) => {             
+        this.setState({
+          heroVideoDetails: [res[0].data],
+          commentsList: res[0].data.comments,
+          nextVideoList: res[1].data
         });
+      })
+    )
+    .catch(err => {
+      console.error(err);
+    });
     };
   
     updateHero = (id) => {
@@ -49,9 +49,27 @@ class MainVideoPage extends React.Component {
     };
   
     componentDidUpdate(prevProps) {
+      console.log(prevProps);
       if (prevProps.match.params.id !== this.props.match.params.id) {
-        this.updateHero(this.props.match.params.id);
+        setTimeout(this.updateHero(this.props.match.params.id), 4000);
       };
+    };
+
+    addComment = (event, id) => {
+      event.preventDefault();
+      
+    axios.post(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${API_KEY}`, {
+    comment: event.target.value,
+    })
+    .then(res => {  
+      this.setState({
+        heroVideoDetails: [res.data],
+        commentsList: res.data.comments, 
+      })
+      event.target.reset();
+      console.log(res)
+      })
+      .catch(err => console.log(err));
     };
 
     render() {
@@ -61,7 +79,7 @@ class MainVideoPage extends React.Component {
           <div className="section-container">
               <section className="main-section">
                   <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails} />
-                  <CommentsSection commentsList={this.state.commentsList} />
+                  <CommentsSection commentsList={this.state.commentsList} addComment={this.addComment}/>
               </section>
                 <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} />
           </div>
