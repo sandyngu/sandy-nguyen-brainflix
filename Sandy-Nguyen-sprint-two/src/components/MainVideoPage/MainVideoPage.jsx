@@ -49,7 +49,6 @@ class MainVideoPage extends React.Component {
     };
   
     componentDidUpdate(prevProps) {
-      console.log(prevProps);
       if (prevProps.match.params.id !== this.props.match.params.id) {
         this.updateHero(this.props.match.params.id);
       };

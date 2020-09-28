@@ -68,7 +68,6 @@ input, textarea {
             }
             @include desktop {
                 width: 100%;
-                max-width: 500px;
             }
         }
     }
@@ -116,7 +115,7 @@ input, textarea {
                     margin-bottom: 33px;
                 }
                 @include desktop {
-                    height: 7.5vh;
+                    height: 4.9vw;
                     margin: 0;
                 }
             }
