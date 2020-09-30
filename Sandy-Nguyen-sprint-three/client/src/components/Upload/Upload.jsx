@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import "./upload.scss";
 
 function Upload() {
+
     return (
         <>
             <Header />
