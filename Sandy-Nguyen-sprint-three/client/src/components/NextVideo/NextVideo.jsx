@@ -8,11 +8,11 @@ function NextVideo(props) {
                 <> 
                     {heroVideo[0].id !== id &&
                     <div className="side-section__next-video">                     
-                            <img src={image} className="side-section__next-video-image" alt="Video Thumbnail"/>
-                            <div className="side-section__next-video-content">
-                                <h3 className="side-section__next-video-title">{title}</h3>
-                                <h3 className="side-section__next-video-author">{channel}</h3>
-                            </div>
+                        <img src={image} className="side-section__next-video-image" alt="Video Thumbnail"/>
+                        <div className="side-section__next-video-content">
+                            <h3 className="side-section__next-video-title">{title}</h3>
+                            <h3 className="side-section__next-video-author">{channel}</h3>
+                        </div>
                     </div>
                     }
                 </>

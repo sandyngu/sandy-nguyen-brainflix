@@ -13,12 +13,11 @@ class MainVideoPage extends React.Component {
 
     state = {
         heroVideoDetails: [],
-        commentsList: [],
         nextVideoList: []
       };
     
     componentDidMount() {
-      let URL1 = `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=${API_KEY}`;
+      let URL1 = `https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=${API_KEY}`;
       let URL2 = `https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`;
   
       const requestOne = axios.get(URL1);
@@ -26,11 +25,9 @@ class MainVideoPage extends React.Component {
   
       axios.all([requestOne, requestTwo])
       .then(
-        axios.spread((...res) => {           
-          console.log(res[0].data)
+        axios.spread((...res) => { 
           this.setState({
             heroVideoDetails: [res[0].data],
-            commentsList: res[0].data.comments,
             nextVideoList: res[1].data
           });
         })
@@ -44,8 +41,7 @@ class MainVideoPage extends React.Component {
       axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${API_KEY}`)
       .then(res => {  
         this.setState({
-          heroVideoDetails: [res.data],
-          commentsList: res.data.comments, 
+          heroVideoDetails: [res.data], 
         });
       })
       .catch(err => console.log(err));
@@ -57,14 +53,13 @@ class MainVideoPage extends React.Component {
       };
     };
 
-  //   uploadVideo = (title, description) => {
-  //     axios.post(`https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`)
-  //         .then(res => {
-  //           this.setState({
-
-  //           })
-  //         })
-  //   }
+    uploadVideo = (image, title, description) => {
+      axios.post(`https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`)
+          .then(res => {
+            this.setState({
+            })
+          })
+    }
 
   //   submitHandler = (event) => {
   //     event.preventDefault();
@@ -81,7 +76,7 @@ class MainVideoPage extends React.Component {
             <div className="section-container">
                 <section className="main-section">
                     <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails} />
-                    <CommentsSection commentsList={this.state.commentsList} />
+                    <CommentsSection commentsList={this.state.heroVideoDetails} />
                 </section>
                   <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} />
             </div>

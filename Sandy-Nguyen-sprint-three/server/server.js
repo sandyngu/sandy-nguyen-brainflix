@@ -9,7 +9,11 @@ require('dotenv').config();
 const {PORT, BACKEND_URL} = process.env
 
 app.get('/', (req, res) => {
-    res.send('Hello Sandy')
+    res.send('This is the main video')
 })
 
-app.listen(PORT, () => console.log(`Started on ${BACKEND_URL} ${PORT}`));
+app.get('/videos', (req, res) => {
+    res.send('Here are the list of the next videos')
+})
+
+app.listen(PORT, () => console.log(`Started on ${BACKEND_URL}${PORT}`));

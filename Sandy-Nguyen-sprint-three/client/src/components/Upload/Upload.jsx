@@ -25,7 +25,7 @@ function Upload() {
                                 <br/><label className="upload-section__form-title">ADD A VIDEO DESCRIPTION</label>
                                 <br/><textarea type="text" name="description" className="upload-section__form-input upload-section__form-input-description" placeholder="Add a description of your video"/>
                                 <div className=" upload-section__form-options">
-                                    <button className="upload-section__form-options-publish">PUBLISH</button>
+                                    <button className="upload-section__form-options-publish" /*onSubmit={() => uploadVideo()}*/>PUBLISH</button>
                                     <h3 className="upload-section__form-options-cancel">CANCEL</h3>
                                 </div>
                             </form>
