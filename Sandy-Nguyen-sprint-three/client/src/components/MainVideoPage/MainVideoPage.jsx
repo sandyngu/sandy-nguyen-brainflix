@@ -25,19 +25,19 @@ class MainVideoPage extends React.Component {
       };
 
     updateHero = (id) => {
-      axios.get('/videos')
+      axios.get(`/videos/${id}`)
       .then(res => {  
         window.scrollTo(0, 0);
 
-        let heroVideo = res.data.filter(videoInfo => videoInfo.id === id)
         this.setState({
-          heroVideoDetails: [heroVideo[0]]
+          heroVideoDetails: [res.data]
         })
       })
       .catch(err => console.log(err));
     };
   
     componentDidUpdate(prevProps) {
+
       if (prevProps.match.params.id !== this.props.match.params.id) {
         this.updateHero(this.props.match.params.id);
       };
