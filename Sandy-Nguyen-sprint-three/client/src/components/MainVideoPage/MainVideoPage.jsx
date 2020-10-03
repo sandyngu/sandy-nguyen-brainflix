@@ -7,7 +7,7 @@ import HeroVideoDetails from '../HeroVideoDetails/HeroVideoDetails';
 import CommentsSection from '../CommentsSection/CommentsSection';
 import NextVideoQueue from '../NextVideoQueue/NextVideoQueue';
 
-const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
+// const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
 
 class MainVideoPage extends React.Component {
 
@@ -17,32 +17,27 @@ class MainVideoPage extends React.Component {
       };
     
     componentDidMount() {
-      let URL1 = `https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=${API_KEY}`;
-      let URL2 = `https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`;
-  
-      const requestOne = axios.get(URL1);
-      const requestTwo = axios.get(URL2);
-  
-      axios.all([requestOne, requestTwo])
-      .then(
-        axios.spread((...res) => { 
+        axios.get('/videos')
+        .then(res => {
+          console.log(res.data)
           this.setState({
-            heroVideoDetails: [res[0].data],
-            nextVideoList: res[1].data
-          });
+              heroVideoDetails: [res.data[0]],
+              nextVideoList: res.data.slice(-1)[0]
+            });
         })
-        )
-        .catch(err => {
-      console.error(err);
-    });
-    };
-  
+        .catch(err => console.log(err))
+      };
+
     updateHero = (id) => {
-      axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${API_KEY}`)
+      axios.get('/videos/')
       .then(res => {  
+        window.scrollTo(0, 0);
+
+        let heroVideo = res.data.filter(videoInfo => videoInfo.id === id)
+
         this.setState({
-          heroVideoDetails: [res.data], 
-        });
+          heroVideoDetails: [heroVideo[0]]
+        })
       })
       .catch(err => console.log(err));
     };
@@ -52,21 +47,6 @@ class MainVideoPage extends React.Component {
         this.updateHero(this.props.match.params.id);
       };
     };
-
-    uploadVideo = (image, title, description) => {
-      axios.post(`https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`)
-          .then(res => {
-            this.setState({
-            })
-          })
-    }
-
-  //   submitHandler = (event) => {
-  //     event.preventDefault();
-  //     let title = event.target.title.value;
-  //     let description = event.target.description.value;
-  //     this.uploadVideo(title, description);
-  // };
 
     render() {
         return (
@@ -78,7 +58,7 @@ class MainVideoPage extends React.Component {
                     <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails} />
                     <CommentsSection commentsList={this.state.heroVideoDetails} />
                 </section>
-                  <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} />
+                  <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} updateHero={this.updateHero}/>
             </div>
           </>
         );

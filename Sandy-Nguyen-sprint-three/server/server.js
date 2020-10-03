@@ -1,19 +1,39 @@
-const axios = require('axios');
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 require('dotenv').config();
+const data = require('./data.json');
 
-// const PORT = process.env.PORT
-// const BACKEND_URL = process.env.BACKEND_URL
+app.use(bodyParser.json())
 
 const {PORT, BACKEND_URL} = process.env
 
-app.get('/', (req, res) => {
-    res.send('This is the main video')
+app.get('/videos', (_req, res) => {
+    res.json(data)
 })
 
-app.get('/videos', (req, res) => {
-    res.send('Here are the list of the next videos')
+app.get('/videos/:id', (req, res) => {
+    res.render('/', {id: req.params.id});
 })
 
-app.listen(PORT, () => console.log(`Started on ${BACKEND_URL}${PORT}`));
+app.post('/videos', (req, res) => {
+    const { id, title, channel, image, description, views, likes, duration, video, timestamp, comments } = req.body
+  res.json([
+    ...data, 
+    {
+      id,
+      title,
+      channel,
+      image,
+      description,
+      views,
+      likes,
+      duration,
+      video,
+      timestamp,
+      comments,
+    }
+  ])
+})
+
+app.listen(PORT, () => console.log(`Listening on ${BACKEND_URL}:${PORT}`));

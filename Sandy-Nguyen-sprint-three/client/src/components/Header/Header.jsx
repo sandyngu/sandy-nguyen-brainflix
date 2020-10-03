@@ -8,7 +8,7 @@ function Header() {
     return (
         <header className="header">
             <div className="header__logo-container">
-                <Link to= '/'>
+                <Link to= "/">
                     <img src={Logo} className="header__logo" alt="BrainFlix Logo"/>
                 </Link>
             </div>
@@ -17,7 +17,7 @@ function Header() {
                     <input type="text" name="search" className="header__search-bar-input" placeholder="Search"/>
                 </form>
                 <div className="header__upload-photo-container">
-                    <Link to='/upload' className="header__upload">
+                    <Link to="/upload" className="header__upload">
                         <button type="button" className="button header__upload-button"><img src={UploadIcon} alt="Upload Icon" className="header__upload-button-icon"/> UPLOAD</button>
                     </Link>
                     <div className="header__circle-photo"></div>

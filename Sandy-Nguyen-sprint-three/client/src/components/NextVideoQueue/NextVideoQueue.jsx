@@ -10,7 +10,7 @@ class NextVideoQueue extends React.Component {
                 <p className="side-section__heading">NEXT VIDEO</p>
                     {this.props.nextVideoList.map(videoInfo => 
                         <Link key={videoInfo.id} to={`/video/${videoInfo.id}`} className="side-section__next-video-link">
-                            <NextVideo id={videoInfo.id} image={videoInfo.image} title={videoInfo.title} channel={videoInfo.channel} heroVideo={this.props.heroVideoDetails} updateHero={this.props.updateHero} />
+                            <NextVideo id={videoInfo.id} image={videoInfo.image} title={videoInfo.title} channel={videoInfo.channel} heroVideo={this.props.heroVideoDetails} updateHero={this.props.updateHero}/>
                         </Link>
                     )}                            
             </section>
