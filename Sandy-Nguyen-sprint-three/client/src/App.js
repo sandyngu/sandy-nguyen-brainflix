@@ -10,7 +10,7 @@ function App() {
       <div className="App">       
       <Switch>
           <Route path='/' exact component={MainVideoPage} />
-          <Route path='/video/:id' component={MainVideoPage} />
+          <Route path='/videos/:id' component={MainVideoPage} />
           <Route path='/upload' component={Upload} />
       </Switch>
       </div>

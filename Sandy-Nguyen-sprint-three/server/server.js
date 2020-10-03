@@ -12,9 +12,11 @@ app.get('/videos', (_req, res) => {
     res.json(data)
 })
 
-app.get('/videos/:id', (req, res) => {
-    res.render('/', {id: req.params.id});
-})
+// app.get('/videos/:id', (_req, res) => {
+//   let id = req.params.id;
+//   let video = data.filter(video => video.id === id);
+//   return res.json({message: 'Video Loaded', data: video})
+// })
 
 app.post('/videos', (req, res) => {
     const { id, title, channel, image, description, views, likes, duration, video, timestamp, comments } = req.body

@@ -167,6 +167,11 @@ input, textarea {
             @include tablet {
                 margin: 0 45px;
             }
+
+            &:hover {
+                cursor: pointer;
+                color: $button-hover-color;
+            }
         }
     }
 }

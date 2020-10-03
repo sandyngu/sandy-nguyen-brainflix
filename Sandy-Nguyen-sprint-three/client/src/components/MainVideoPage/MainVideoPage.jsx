@@ -1,13 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-/*import { v4 as uuidv4 } from 'uuid';*/
 import Header from '../Header/Header';
 import HeroVideo from '../HeroVideo/HeroVideo';
 import HeroVideoDetails from '../HeroVideoDetails/HeroVideoDetails';
 import CommentsSection from '../CommentsSection/CommentsSection';
 import NextVideoQueue from '../NextVideoQueue/NextVideoQueue';
-
-// const API_KEY = '110f950a-c58f-42c6-969e-3e58a775af61';
 
 class MainVideoPage extends React.Component {
 
@@ -19,7 +16,6 @@ class MainVideoPage extends React.Component {
     componentDidMount() {
         axios.get('/videos')
         .then(res => {
-          console.log(res.data)
           this.setState({
               heroVideoDetails: [res.data[0]],
               nextVideoList: res.data.slice(-1)[0]
@@ -29,12 +25,11 @@ class MainVideoPage extends React.Component {
       };
 
     updateHero = (id) => {
-      axios.get('/videos/')
+      axios.get('/videos')
       .then(res => {  
         window.scrollTo(0, 0);
 
         let heroVideo = res.data.filter(videoInfo => videoInfo.id === id)
-
         this.setState({
           heroVideoDetails: [heroVideo[0]]
         })
@@ -58,7 +53,7 @@ class MainVideoPage extends React.Component {
                     <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails} />
                     <CommentsSection commentsList={this.state.heroVideoDetails} />
                 </section>
-                  <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} updateHero={this.updateHero}/>
+                  <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} updateHero={this.updateHero} />
             </div>
           </>
         );

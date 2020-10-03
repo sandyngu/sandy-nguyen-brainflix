@@ -62,12 +62,17 @@ class Upload extends React.Component {
             let heroVideoDetails = res.data;
             let lastItem = heroVideoDetails[heroVideoDetails.length-2]
             lastItem.push(newNextVideo)
-            /*at 10th index*/ let uploadedHeroVideo = heroVideoDetails.splice(9, 0, newVideo);
+            heroVideoDetails.splice(9, 0, newVideo);
 
         this.setState({
             heroVideoDetails: '',
         })
         })
+    }
+
+    cancelForm() {
+        let form = document.querySelector('.upload-section__form');
+        form.reset();
     }
 
 render() {
