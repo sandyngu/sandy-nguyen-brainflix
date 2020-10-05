@@ -4,17 +4,18 @@ import uuid from 'uuid';
 import Header from '../Header/Header';
 import UploadImage from '../../assets/images/Upload-video-preview.jpg';
 import Video from '../../assets/video/BrainStation Sample Video.mp4';
-import "./upload.scss";
+import './upload.scss';
 
 class Upload extends React.Component {
 
     cancelForm() {
-        const form = document.querySelector('.upload-section__form');
-        form.reset();
+        const uploadForm = document.querySelector('.upload-section__form');
+        uploadForm.reset();
     };
 
     uploadVideo = (e) => {
         e.preventDefault();
+        this.cancelForm();
         window.scrollTo(0, 0);
 
         const time = new Date().getTime();
@@ -66,43 +67,42 @@ class Upload extends React.Component {
     axios.post('/videos', {newNextVideo, newHeroVideo})
         .catch(err => console.log(err));
 
-    alert('New Video Successfully Uploaded!');
+        alert('New Video Successfully Uploaded!');
     };
 
-
-render() {
-    return (
-        <>
-            <Header />
-            <div className="divider upload-section__divider--thin"></div>
-            <div className="upload-section">
-                <h1 className="upload-section__heading">Upload Video</h1>
-                <div className="divider upload-section__divider upload-section__divider--hidden"></div>
-                <div className="upload-section__container">
-                    <div className="upload-section__video-form-container">
-                        <div className="upload-section__video">
-                            <h4 className="upload-section__video-title">VIDEO THUMBNAIL</h4>
-                            <img src={UploadImage} className="upload-section__video-thumbnail" alt="Bicycle Thumbnail"/>
+    render() {
+        return (
+            <>
+                <Header />
+                <div className="divider upload-section__divider--thin"></div>
+                <div className="upload-section">
+                    <h1 className="upload-section__heading">Upload Video</h1>
+                    <div className="divider upload-section__divider upload-section__divider--hidden"></div>
+                    <div className="upload-section__container">
+                        <div className="upload-section__video-form-container">
+                            <div className="upload-section__video">
+                                <h4 className="upload-section__video-title">VIDEO THUMBNAIL</h4>
+                                <img src={UploadImage} className="upload-section__video-thumbnail" alt="Bicycle Thumbnail"/>
+                            </div>
+                            <div className="upload-section__form-container">
+                                <form className="upload-section__form" onSubmit={this.uploadVideo}>
+                                    <label className="upload-section__form-title">TITLE YOUR VIDEO</label>
+                                    <br/><input type="text" name="title" className="upload-section__form-input upload-section__form-input-title" placeholder="Add a title to your video"/>
+                                    <br/><label className="upload-section__form-title">ADD A VIDEO DESCRIPTION</label>
+                                    <br/><textarea type="text" name="description" className="upload-section__form-input upload-section__form-input-description" placeholder="Add a description of your video"/>
+                                    <div className=" upload-section__form-options">
+                                        <button className="upload-section__form-options-publish">PUBLISH</button>
+                                        <h3 className="upload-section__form-options-cancel" onClick={this.cancelForm}>CANCEL</h3>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div className="upload-section__form-container">
-                            <form className="upload-section__form" onSubmit={this.uploadVideo}>
-                                <label className="upload-section__form-title">TITLE YOUR VIDEO</label>
-                                <br/><input type="text" name="title" className="upload-section__form-input upload-section__form-input-title" placeholder="Add a title to your video"/>
-                                <br/><label className="upload-section__form-title">ADD A VIDEO DESCRIPTION</label>
-                                <br/><textarea type="text" name="description" className="upload-section__form-input upload-section__form-input-description" placeholder="Add a description of your video"/>
-                                <div className=" upload-section__form-options">
-                                    <button className="upload-section__form-options-publish">PUBLISH</button>
-                                    <h3 className="upload-section__form-options-cancel" onClick={this.cancelForm}>CANCEL</h3>
-                                </div>
-                            </form>
-                        </div>
+                        <div className="divider upload-section__divider upload-section__form-divider upload-section__divider--hidden upload-section__divider--hidden-bottom"></div>
                     </div>
-                    <div className="divider upload-section__divider upload-section__form-divider upload-section__divider--hidden upload-section__divider--hidden-bottom"></div>
                 </div>
-            </div>
-        </>
-    )
-}
-}
+            </>
+        );
+    };
+};  
 
 export default Upload;

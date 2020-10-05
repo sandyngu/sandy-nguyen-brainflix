@@ -18,7 +18,7 @@ function HeroVideoControls(props) {
                 <img src={Volume} className="main__hero-video-icon main__hero-video-controls-volume" alt="Volume Icon"/>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default HeroVideoControls;

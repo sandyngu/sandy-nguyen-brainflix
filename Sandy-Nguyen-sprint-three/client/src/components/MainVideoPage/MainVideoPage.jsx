@@ -34,7 +34,7 @@ class MainVideoPage extends React.Component {
         
         this.setState({
           heroVideoDetails: [res.data]
-        })
+        });
       })
       .catch(err => console.log(err));
     };
@@ -46,10 +46,21 @@ class MainVideoPage extends React.Component {
       };
     };
 
+    returnToHome() {
+      axios.get('/videos')
+        .then(res => {
+          this.setState({
+              heroVideoDetails: [res.data[0]],
+              nextVideoList: res.data[res.data.length-1]
+            });
+        })
+        .catch(err => console.log(err))
+    }
+
     render() {
         return (
           <>
-            <Header />
+            <Header returnToHome={this.state.returnToHome} />
             <HeroVideo heroVideoDetails={this.state.heroVideoDetails} />
             <div className="section-container">
                 <section className="main-section">

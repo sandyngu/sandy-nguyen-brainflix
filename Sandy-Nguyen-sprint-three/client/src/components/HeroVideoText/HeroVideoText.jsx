@@ -1,6 +1,6 @@
 import React from 'react';
-import ViewsIcon from '../../assets/icons/SVG/Icon-views.svg'
-import LikesIcon from '../../assets/icons/SVG/Icon-likes.svg'
+import ViewsIcon from '../../assets/icons/SVG/Icon-views.svg';
+import LikesIcon from '../../assets/icons/SVG/Icon-likes.svg';
 import './hero-video-text.scss';
 
 function HeroVideoText(props) {
