@@ -1,35 +1,42 @@
-import React from "react";
+import React from 'react';
 import axios from 'axios';
-import uuid from "uuid";
-import UploadImage from "../../assets/images/Upload-video-preview.jpg";
+import uuid from 'uuid';
 import Header from '../Header/Header';
+import UploadImage from '../../assets/images/Upload-video-preview.jpg';
+import Video from '../../assets/video/BrainStation Sample Video.mp4';
 import "./upload.scss";
 
 class Upload extends React.Component {
 
+    cancelForm() {
+        const form = document.querySelector('.upload-section__form');
+        form.reset();
+    };
+
     uploadVideo = (e) => {
         e.preventDefault();
-        let time = new Date().getTime();
+        window.scrollTo(0, 0);
 
-        let generatedId = `${uuid.v4()}`
-
-        let newNextVideo = {
+        const time = new Date().getTime();
+        const generatedId = `${uuid.v4()}`
+  
+        const newNextVideo = {
             id: generatedId,
             title: e.target.title.value,
-            channel: 'Some New Channel',
+            channel: 'BrainStation',
             image: UploadImage
         }
         
-        let newVideo = {
+        const newHeroVideo = {
             id: generatedId,
             title: e.target.title.value,
-            channel: 'Some New Channel',
+            channel: 'BrainStation',
             image: UploadImage,
             description: e.target.description.value,
-            views: 0,
-            likes: 0,
+            views: '123,456',
+            likes: '789,110',
             duration: "3:45",
-            video: '../../assets/video/BrainStation Sample Video.mp4',
+            video: Video,
             timestamp: time,
             comments: [
                 {
@@ -55,25 +62,13 @@ class Upload extends React.Component {
                 }
             ]         
         }
-        axios.post('/videos', newVideo, newNextVideo)
-        .then (res => {
-            console.log(res.data)
+  
+    axios.post('/videos', {newNextVideo, newHeroVideo})
+        .catch(err => console.log(err));
 
-            let heroVideoDetails = res.data;
-            let lastItem = heroVideoDetails[heroVideoDetails.length-2]
-            lastItem.push(newNextVideo)
-            heroVideoDetails.splice(9, 0, newVideo);
+    alert('New Video Successfully Uploaded!');
+    };
 
-        this.setState({
-            heroVideoDetails: '',
-        })
-        })
-    }
-
-    cancelForm() {
-        let form = document.querySelector('.upload-section__form');
-        form.reset();
-    }
 
 render() {
     return (

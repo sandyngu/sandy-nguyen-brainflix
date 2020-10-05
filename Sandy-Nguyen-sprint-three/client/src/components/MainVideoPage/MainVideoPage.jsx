@@ -18,7 +18,7 @@ class MainVideoPage extends React.Component {
         .then(res => {
           this.setState({
               heroVideoDetails: [res.data[0]],
-              nextVideoList: res.data.slice(-1)[0]
+              nextVideoList: res.data[res.data.length-1]
             });
         })
         .catch(err => console.log(err))
@@ -29,6 +29,9 @@ class MainVideoPage extends React.Component {
       .then(res => {  
         window.scrollTo(0, 0);
 
+        let commentsForm = document.querySelector('.comments-section__form');
+        commentsForm.reset();
+        
         this.setState({
           heroVideoDetails: [res.data]
         })
@@ -53,8 +56,8 @@ class MainVideoPage extends React.Component {
                     <HeroVideoDetails heroVideoDetails={this.state.heroVideoDetails} />
                     <CommentsSection commentsList={this.state.heroVideoDetails} />
                 </section>
-                  <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} updateHero={this.updateHero} />
-            </div>
+                  <NextVideoQueue heroVideoDetails={this.state.heroVideoDetails} nextVideoList={this.state.nextVideoList} />
+            </div>              
           </>
         );
     };
